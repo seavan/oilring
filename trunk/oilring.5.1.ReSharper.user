@@ -1,0 +1,387 @@
+<Configuration>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="d:Miscellaneous Files/f:config.xml/l:D!?Projects?oilring?bin?james-2.3.2?apps?james?SAR-INF?config.xml" caret="3867" fromTop="0" />
+      <File id="5B224CC3-7216-485D-BACD-82851ABD3D12/d:Views/d:User/f:ListItems.ascx" caret="317" fromTop="7" />
+      <File id="5B224CC3-7216-485D-BACD-82851ABD3D12/d:Views/d:User/f:Edit.aspx" caret="0" fromTop="0" />
+      <File id="7D772B65-07B0-453E-827A-85DD4369343F/f:RelationOperand.cs" caret="572" fromTop="12" />
+      <File id="7D772B65-07B0-453E-827A-85DD4369343F/f:DataRelationRegistrar.cs" caret="914" fromTop="17" />
+      <File id="7D772B65-07B0-453E-827A-85DD4369343F/f:IDataService.cs" caret="263" fromTop="11" />
+      <File id="0A12FC3A-56EC-4534-A664-DA259BF43913/f:Mapper.cs" caret="1201" fromTop="26" />
+      <File id="7D772B65-07B0-453E-827A-85DD4369343F/f:DataStore.cs" caret="142" fromTop="6" />
+      <File id="7D772B65-07B0-453E-827A-85DD4369343F/f:DataStore.user.cs" caret="1403" fromTop="15" />
+      <File id="A416E38F-E494-4384-81E1-C0E9280F18F0/d:DataAccess/f:ITitleable.cs" caret="136" fromTop="5" />
+      <File id="7D772B65-07B0-453E-827A-85DD4369343F/d:Objects/f:ArticleObject.cs" caret="561" fromTop="19" />
+      <File id="7D772B65-07B0-453E-827A-85DD4369343F/d:Objects/f:SeminarObject.cs" caret="598" fromTop="20" />
+      <File id="7D772B65-07B0-453E-827A-85DD4369343F/d:Objects/f:ConferenceObject.cs" caret="264" fromTop="3" />
+      <File id="7D772B65-07B0-453E-827A-85DD4369343F/d:Objects/f:GrantObject.cs" caret="261" fromTop="4" />
+      <File id="7D772B65-07B0-453E-827A-85DD4369343F/d:Objects/f:TechnoObject.cs" caret="260" fromTop="3" />
+      <File id="5B224CC3-7216-485D-BACD-82851ABD3D12/d:Views/d:Grant/f:RelatedEditWidget.ascx" caret="552" fromTop="9" />
+      <File id="5B224CC3-7216-485D-BACD-82851ABD3D12/d:Controllers/f:TagController.cs" caret="2109" fromTop="20" />
+      <File id="5B224CC3-7216-485D-BACD-82851ABD3D12/d:Content/d:js/f:autocomplete.js" caret="1998" fromTop="11" />
+      <File id="5B224CC3-7216-485D-BACD-82851ABD3D12/d:Controllers/f:SeminarController.cs" caret="1230" fromTop="19" />
+      <File id="5B224CC3-7216-485D-BACD-82851ABD3D12/d:Controllers/f:UserController.cs" caret="1208" fromTop="25" />
+      <File id="5B224CC3-7216-485D-BACD-82851ABD3D12/d:Views/d:Journal/f:SingleWidget.ascx" caret="988" fromTop="18" />
+      <File id="7D772B65-07B0-453E-827A-85DD4369343F/d:Interfaces/f:INotificationService.cs" caret="981" fromTop="25" />
+      <File id="A416E38F-E494-4384-81E1-C0E9280F18F0/f:oilring.impl.cs" caret="207" fromTop="5" />
+      <File id="7D772B65-07B0-453E-827A-85DD4369343F/d:Services/f:MessageTemplateService.cs" caret="1057" fromTop="21" />
+      <File id="7D772B65-07B0-453E-827A-85DD4369343F/f:DataService.cs" caret="27535" fromTop="20" />
+      <File id="7D772B65-07B0-453E-827A-85DD4369343F/d:Interfaces/f:IUserService.cs" caret="1473" fromTop="33" />
+      <File id="7D772B65-07B0-453E-827A-85DD4369343F/d:Objects/f:Notification.object.cs" caret="4505" fromTop="20" />
+      <File id="7D772B65-07B0-453E-827A-85DD4369343F/d:Services/f:UserService.cs" caret="21844" fromTop="22" />
+      <File id="7D772B65-07B0-453E-827A-85DD4369343F/d:Services/f:NotificationService.cs" caret="3489" fromTop="38" />
+      <File id="5B224CC3-7216-485D-BACD-82851ABD3D12/d:Content/d:js/f:controls.js" caret="8217" fromTop="14" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="7D772B65-07B0-453E-827A-85DD4369343F/d:Services/f:NotificationService.cs" caret="8303" fromTop="25" />
+      <File id="7D772B65-07B0-453E-827A-85DD4369343F/d:Services/f:NotificationService.cs" caret="8113" fromTop="20" />
+      <File id="7D772B65-07B0-453E-827A-85DD4369343F/d:Services/f:NotificationService.cs" caret="3887" fromTop="31" />
+      <File id="7D772B65-07B0-453E-827A-85DD4369343F/d:Services/f:UserService.cs" caret="1981" fromTop="19" />
+      <File id="7D772B65-07B0-453E-827A-85DD4369343F/d:Services/f:NotificationService.cs" caret="3039" fromTop="20" />
+      <File id="A416E38F-E494-4384-81E1-C0E9280F18F0/f:oilring.impl.cs" caret="207" fromTop="5" />
+      <File id="7D772B65-07B0-453E-827A-85DD4369343F/d:Services/f:NotificationService.cs" caret="4221" fromTop="21" />
+      <File id="7D772B65-07B0-453E-827A-85DD4369343F/d:Services/f:NotificationService.cs" caret="4324" fromTop="11" />
+      <File id="7D772B65-07B0-453E-827A-85DD4369343F/d:Services/f:NotificationService.cs" caret="9495" fromTop="29" />
+      <File id="7D772B65-07B0-453E-827A-85DD4369343F/d:Services/f:NotificationService.cs" caret="9324" fromTop="23" />
+      <File id="7D772B65-07B0-453E-827A-85DD4369343F/d:Interfaces/f:IUserService.cs" caret="0" fromTop="0" />
+      <File id="7D772B65-07B0-453E-827A-85DD4369343F/d:Services/f:NotificationService.cs" caret="3999" fromTop="11" />
+      <File id="7D772B65-07B0-453E-827A-85DD4369343F/f:DataService.cs" caret="4735" fromTop="17" />
+      <File id="7D772B65-07B0-453E-827A-85DD4369343F/d:Services/f:NotificationService.cs" caret="756" fromTop="30" />
+      <File id="7D772B65-07B0-453E-827A-85DD4369343F/d:Services/f:NotificationService.cs" caret="3773" fromTop="35" />
+      <File id="7D772B65-07B0-453E-827A-85DD4369343F/d:Services/f:NotificationService.cs" caret="4366" fromTop="20" />
+      <File id="7D772B65-07B0-453E-827A-85DD4369343F/d:Services/f:NotificationService.cs" caret="1473" fromTop="9" />
+      <File id="7D772B65-07B0-453E-827A-85DD4369343F/d:Services/f:NotificationService.cs" caret="2413" fromTop="29" />
+      <File id="7D772B65-07B0-453E-827A-85DD4369343F/d:Services/f:NotificationService.cs" caret="2658" fromTop="35" />
+      <File id="7D772B65-07B0-453E-827A-85DD4369343F/d:Services/f:UserService.cs" caret="789" fromTop="31" />
+      <File id="7D772B65-07B0-453E-827A-85DD4369343F/f:DataService.cs" caret="27535" fromTop="20" />
+      <File id="7D772B65-07B0-453E-827A-85DD4369343F/d:Services/f:UserService.cs" caret="21946" fromTop="21" />
+      <File id="7D772B65-07B0-453E-827A-85DD4369343F/d:Interfaces/f:IUserService.cs" caret="1473" fromTop="33" />
+      <File id="7D772B65-07B0-453E-827A-85DD4369343F/d:Objects/f:Notification.object.cs" caret="4505" fromTop="20" />
+      <File id="7D772B65-07B0-453E-827A-85DD4369343F/d:Services/f:UserService.cs" caret="21844" fromTop="22" />
+      <File id="7D772B65-07B0-453E-827A-85DD4369343F/d:Services/f:NotificationService.cs" caret="2288" fromTop="19" />
+      <File id="7D772B65-07B0-453E-827A-85DD4369343F/d:Services/f:NotificationService.cs" caret="3569" fromTop="25" />
+      <File id="7D772B65-07B0-453E-827A-85DD4369343F/d:Services/f:NotificationService.cs" caret="3570" fromTop="20" />
+      <File id="5B224CC3-7216-485D-BACD-82851ABD3D12/d:Content/d:js/f:controls.js" caret="8423" fromTop="19" />
+      <File id="5B224CC3-7216-485D-BACD-82851ABD3D12/d:Content/d:js/f:controls.js" caret="8217" fromTop="14" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="string" priority="16" />
+      <Item value="public" priority="27" />
+      <Item value="long" priority="5" />
+      <Item value="IQueryable`0" priority="3" />
+      <Item value="RuntimeTypeHandle`0" priority="0" />
+      <Item value="return" priority="20" />
+      <Item value="DataContext`0" priority="2" />
+      <Item value="RT`0" priority="0" />
+      <Item value="var" priority="23" />
+      <Item value="new" priority="17" />
+      <Item value="RC`0" priority="0" />
+      <Item value="DataContext" priority="4" />
+      <Item value="RIT`0" priority="0" />
+      <Item value="T1`0" priority="9" />
+      <Item value="M`0" priority="3" />
+      <Item value="null" priority="11" />
+      <Item value="IRelatableFactory" priority="2" />
+      <Item value="T`0" priority="11" />
+      <Item value="RELATEDTYPE`0" priority="2" />
+      <Item value="static" priority="4" />
+      <Item value="RELATEDFACTORY`0" priority="2" />
+      <Item value="RELATEDCONVERTER`0" priority="0" />
+      <Item value="s1" priority="1" />
+      <Item value="RELATEDMEDIATOR`0" priority="1" />
+      <Item value="rf" priority="4" />
+      <Item value="GetAllDb`0" priority="0" />
+      <Item value="m1" priority="0" />
+      <Item value="relateddb" priority="0" />
+      <Item value="class" priority="8" />
+      <Item value="RubricObject`0" priority="0" />
+      <Item value="ArticleObject`0" priority="0" />
+      <Item value="Article`0" priority="2" />
+      <Item value="_RubricLink`0" priority="2" />
+      <Item value="from" priority="3" />
+      <Item value="_table1" priority="8" />
+      <Item value="join" priority="3" />
+      <Item value="Microsoft" priority="4" />
+      <Item value="_mediator" priority="7" />
+      <Item value="on" priority="3" />
+      <Item value="a" priority="0" />
+      <Item value="b" priority="1" />
+      <Item value="t1" priority="4" />
+      <Item value="equals" priority="2" />
+      <Item value="m" priority="1" />
+      <Item value="Id" priority="1" />
+      <Item value="_table2" priority="6" />
+      <Item value="select" priority="0" />
+      <Item value="t2" priority="2" />
+      <Item value="REL_ObjectType" priority="2" />
+      <Item value="into" priority="0" />
+      <Item value="where" priority="8" />
+      <Item value="Equals`0" priority="0" />
+      <Item value="s" priority="3" />
+      <Item value="interface" priority="1" />
+      <Item value="R1`0" priority="0" />
+      <Item value="IRelatable`0" priority="3" />
+      <Item value="CommonRelatableFactory" priority="0" />
+      <Item value="Rubric`0" priority="1" />
+      <Item value="void" priority="4" />
+      <Item value="T2`0" priority="1" />
+      <Item value="R`0" priority="7" />
+      <Item value="r" priority="7" />
+      <Item value="_t1" priority="0" />
+      <Item value="IRelatableCreator" priority="0" />
+      <Item value="_arg" priority="2" />
+      <Item value="_arg1" priority="6" />
+      <Item value="t" priority="1" />
+      <Item value="Commit`0" priority="0" />
+      <Item value="R" priority="0" />
+      <Item value="r1" priority="0" />
+      <Item value="Get`0" priority="0" />
+      <Item value="DoubleRelatableFactory" priority="1" />
+      <Item value="SingleRelatableFactory" priority="1" />
+      <Item value="base" priority="1" />
+      <Item value="private" priority="1" />
+      <Item value="SingleRelatableFactory&lt;T1,T2,R&gt;" priority="0" />
+      <Item value="m_SRF2" priority="1" />
+      <Item value="partial" priority="0" />
+      <Item value="IDatabaseEntity`0" priority="4" />
+      <Item value="id" priority="1" />
+      <Item value="Enyim" priority="0" />
+      <Item value="Caching" priority="0" />
+      <Item value="CacheExtensions`0" priority="0" />
+      <Item value="bool" priority="4" />
+      <Item value="false" priority="1" />
+      <Item value="try" priority="0" />
+      <Item value="MemcachedClient" priority="0" />
+      <Item value="client" priority="3" />
+      <Item value="m_UseMemcached" priority="6" />
+      <Item value="catch" priority="0" />
+      <Item value="System" priority="0" />
+      <Item value="Exception`0" priority="0" />
+      <Item value="object" priority="0" />
+      <Item value="if" priority="11" />
+      <Item value="res" priority="1" />
+      <Item value="else" priority="4" />
+      <Item value="cache" priority="2" />
+      <Item value="_key" priority="5" />
+      <Item value="as" priority="0" />
+      <Item value="_depKey" priority="5" />
+      <Item value="foreach" priority="1" />
+      <Item value="for" priority="0" />
+      <Item value="int" priority="2" />
+      <Item value="i" priority="6" />
+      <Item value="Length" priority="0" />
+      <Item value="StoreMode`0" priority="3" />
+      <Item value="String`0" priority="1" />
+      <Item value="m_Client" priority="10" />
+      <Item value="DateTime`0" priority="3" />
+      <Item value="v" priority="1" />
+      <Item value="_value" priority="1" />
+      <Item value="while" priority="0" />
+      <Item value="ulong" priority="0" />
+      <Item value="dv" priority="0" />
+      <Item value="_Get`1" priority="0" />
+      <Item value="keyName" priority="1" />
+      <Item value="depKey" priority="3" />
+      <Item value="_Set`1" priority="2" />
+      <Item value="result" priority="0" />
+      <Item value="dk" priority="1" />
+      <Item value="ResetDep`1" priority="0" />
+      <Item value="_operator" priority="0" />
+      <Item value="_type" priority="0" />
+      <Item value="HttpRuntime`0" priority="0" />
+      <Item value="Cache`0" priority="0" />
+      <Item value="item" priority="4" />
+      <Item value="TagController`0" priority="0" />
+      <Item value="TagObject`0" priority="0" />
+      <Item value="TagModule`0" priority="3" />
+      <Item value="View`0" priority="0" />
+      <Item value="ViewName" priority="1" />
+      <Item value="_model" priority="1" />
+      <Item value="ParentID" priority="0" />
+      <Item value="Model" priority="1" />
+      <Item value="Html" priority="3" />
+      <Item value="REL_ObjectId" priority="2" />
+      <Item value="q" priority="1" />
+      <Item value="OilringHtml`0" priority="0" />
+      <Item value="cnt" priority="0" />
+      <Item value="Service" priority="1" />
+      <Item value="Notamedia" priority="0" />
+      <Item value="SortedList" priority="0" />
+      <Item value="Func" priority="0" />
+      <Item value="SortedList&lt;string,Func&lt;long,string,IQueryable&lt;M&gt;&gt;&gt;" priority="0" />
+      <Item value="m_RegisteredRelations" priority="2" />
+      <Item value="_Name" priority="0" />
+      <Item value="_Result" priority="0" />
+      <Item value="_relationName" priority="1" />
+      <Item value="AsQueryable`0" priority="0" />
+      <Item value="_id" priority="1" />
+      <Item value="_objectType" priority="1" />
+      <Item value="CommentService`0" priority="0" />
+      <Item value="RegisterRelation`0" priority="1" />
+      <Item value="TagService`0" priority="0" />
+      <Item value="GetRelatedDb`2" priority="1" />
+      <Item value="_TagLink`0" priority="1" />
+      <Item value="DummyEntity`0" priority="1" />
+      <Item value="ObjectType" priority="0" />
+      <Item value="objectType" priority="0" />
+      <Item value="m_Converter" priority="1" />
+      <Item value="GetThisRelatedModel`1" priority="0" />
+      <Item value="Relation" priority="4" />
+      <Item value="GetAll`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Notamedia.Oilring.Database.OilringContext">
+      <Item value="GetTable`0" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Linq.Table`1">
+      <Item value="All`1" priority="0" />
+      <Item value="Select`2" priority="0" />
+      <Item value="AsQueryable`0" priority="1" />
+      <Item value="InsertOnSubmit`0" priority="0" />
+      <Item value="InsertAllOnSubmit`1" priority="0" />
+      <Item value="Where`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:">
+      <Item value="GetConverter`0" priority="1" />
+      <Item value="Get`0" priority="2" />
+      <Item value="CreateRelation`0" priority="0" />
+      <Item value="REL_Id1" priority="1" />
+      <Item value="REL_ObjectType1" priority="1" />
+      <Item value="REL_Id2" priority="0" />
+      <Item value="Id" priority="0" />
+      <Item value="REL_ObjectType2" priority="0" />
+      <Item value="ObjectType" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Linq.Expressions.Expression`1">
+      <Item value="Compile`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
+      <Item value="AsQueryable`0" priority="2" />
+      <Item value="Where`1" priority="0" />
+      <Item value="ToList`1" priority="0" />
+      <Item value="ToArray`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Linq.IQueryable`1">
+      <Item value="Select`2" priority="2" />
+      <Item value="Join`4" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Notamedia.Oilring.Database.Article">
+      <Item value="Id" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Int64">
+      <Item value="Equals`0" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Notamedia.Oilring.Database.Rubric">
+      <Item value="Id" priority="4" />
+      <Item value="ObjectType" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Notamedia.Oilring.Database._RubricLink">
+      <Item value="Id" priority="1" />
+      <Item value="REL_Id" priority="2" />
+      <Item value="REL_ObjectType" priority="1" />
+      <Item value="REL_Rubric_ID" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="Equals`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:R">
+      <Item value="REL_ObjectType1" priority="1" />
+      <Item value="REL_Id1" priority="1" />
+      <Item value="REL_Id2" priority="1" />
+      <Item value="REL_ObjectType2" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:T2">
+      <Item value="ObjectType" priority="0" />
+      <Item value="Id" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:T1">
+      <Item value="Id" priority="0" />
+      <Item value="ObjectType" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:admin.db.SingleRelatableFactory`3">
+      <Item value="Get`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:T">
+      <Item value="Id" priority="1" />
+      <Item value="ObjectType" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Enyim.Caching.MemcachedClient">
+      <Item value="Cas`0" priority="2" />
+      <Item value="Get`0" priority="5" />
+      <Item value="GetWithCas`0" priority="4" />
+      <Item value="Store`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Enyim.Caching.Memcached.StoreMode">
+      <Item value="Replace" priority="0" />
+      <Item value="Set" priority="3" />
+      <Item value="Add" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Enyim.Caching.Memcached.CasResult`1">
+      <Item value="Result" priority="1" />
+      <Item value="Cas" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="Format`0" priority="0" />
+      <Item value="IsNullOrEmpty`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.DateTime">
+      <Item value="Now" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Caching.Cache">
+      <Item value="Insert`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Web.HttpRuntime">
+      <Item value="Cache" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:admin.db.TagObject">
+      <Item value="Text" priority="1" />
+      <Item value="Id" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:admin.web.common.TagModule">
+      <Item value="ListWidget`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Web.OilringHtml">
+      <Item value="SingleUri`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.HtmlHelper`1">
+      <Item value="AntiForgeryToken`0" priority="0" />
+      <Item value="Display`0" priority="1" />
+      <Item value="ViewContext" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="Count" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.SortedList`2">
+      <Item value="IndexOfKey`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:admin.db.IDataService`1">
+      <Item value="GetRelated`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.ViewContext">
+      <Item value="Writer" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.TextWriter">
+      <Item value="WriteLine`0" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+</Configuration>

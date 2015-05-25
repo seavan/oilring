@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A416E38F-E494-4384-81E1-C0E9280F18F0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Notamedia.Oilring.Database</RootNamespace>
+    <AssemblyName>oilring.database</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LinqKit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=bc217f8844052a91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\LinqKit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Unity.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\packages\Unity.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataAccess\DummyFullTextSearchable.cs" />
+    <Compile Include="DataAccess\ICommentable.cs" />
+    <Compile Include="DataAccess\IDateRangeItem.cs" />
+    <Compile Include="DataAccess\IDefaultPhotoable.cs" />
+    <Compile Include="DataAccess\IFullTextSearchable.cs" />
+    <Compile Include="DataAccess\IObjectUserVisitorCountable.cs" />
+    <Compile Include="DataAccess\IOrgItem.cs" />
+    <Compile Include="DataAccess\IRubricFilterable.cs" />
+    <Compile Include="DataAccess\ITagFilterable.cs" />
+    <Compile Include="DataAccess\ITitleable.cs" />
+    <Compile Include="DataAccess\ITreeItem.cs" />
+    <Compile Include="DataAccess\IUserItem.cs" />
+    <Compile Include="DatabaseEntity.cs" />
+    <Compile Include="DataServiceLocator.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="IDataServiceLocator.cs" />
+    <Compile Include="IIdentified.cs" />
+    <Compile Include="Interfaces\IArticle.service.cs" />
+    <Compile Include="Interfaces\IArticleService.cs" />
+    <Compile Include="Interfaces\IComment.service.cs" />
+    <Compile Include="Interfaces\ICommentService.cs" />
+    <Compile Include="Interfaces\IConference.service.cs" />
+    <Compile Include="Interfaces\IContact.service.cs" />
+    <Compile Include="Interfaces\IDiscussion.service.cs" />
+    <Compile Include="Interfaces\IDummy_SearchObject.service.cs" />
+    <Compile Include="Interfaces\IDummy_SearchObjectService.cs" />
+    <Compile Include="Interfaces\IEvent.service.cs" />
+    <Compile Include="Interfaces\IFileAttachment.service.cs" />
+    <Compile Include="Interfaces\IFileAttachmentService.cs" />
+    <Compile Include="Interfaces\IGrant.service.cs" />
+    <Compile Include="Interfaces\IGrantService.cs" />
+    <Compile Include="Interfaces\IJournal.service.cs" />
+    <Compile Include="Interfaces\IJournalService.cs" />
+    <Compile Include="Interfaces\ILanguage.service.cs" />
+    <Compile Include="Interfaces\IMessageTemplate.service.cs" />
+    <Compile Include="Interfaces\IMessageTemplateService.cs" />
+    <Compile Include="Interfaces\INotification.service.cs" />
+    <Compile Include="Interfaces\INotificationService.cs" />
+    <Compile Include="Interfaces\IOrganization.service.cs" />
+    <Compile Include="Interfaces\IOrganizationService.cs" />
+    <Compile Include="Interfaces\IOrganization_Dept.service.cs" />
+    <Compile Include="Interfaces\IOrganization_User.service.cs" />
+    <Compile Include="Interfaces\IOuterLink.service.cs" />
+    <Compile Include="Interfaces\IParagraph.service.cs" />
+    <Compile Include="Interfaces\IPatent.service.cs" />
+    <Compile Include="Interfaces\IPhoto.service.cs" />
+    <Compile Include="Interfaces\IPhotoService.cs" />
+    <Compile Include="Interfaces\IPrivateMessageItem.service.cs" />
+    <Compile Include="Interfaces\IPrivateMessageService.cs" />
+    <Compile Include="Interfaces\IPublicationLink.service.cs" />
+    <Compile Include="Interfaces\IRelatableCreator.cs" />
+    <Compile Include="Interfaces\IRelatableFactory.cs" />
+    <Compile Include="Interfaces\IReport.service.cs" />
+    <Compile Include="Interfaces\IRubric.service.cs" />
+    <Compile Include="Interfaces\IRubricService.cs" />
+    <Compile Include="Interfaces\ISeminar.service.cs" />
+    <Compile Include="Interfaces\ISeminarService.cs" />
+    <Compile Include="Interfaces\ITag.service.cs" />
+    <Compile Include="Interfaces\ITagService.cs" />
+    <Compile Include="Interfaces\ITechno.service.cs" />
+    <Compile Include="Interfaces\IUser.service.cs" />
+    <Compile Include="Interfaces\IUserEnhancable.cs" />
+    <Compile Include="Interfaces\IUserService.cs" />
+    <Compile Include="Interfaces\IUser_Degree.service.cs" />
+    <Compile Include="Interfaces\IUser_FriendRequest.service.cs" />
+    <Compile Include="Interfaces\IUser_GroupService.cs" />
+    <Compile Include="Interfaces\IUser_Job.service.cs" />
+    <Compile Include="Interfaces\IUser_JobService.cs" />
+    <Compile Include="Interfaces\IUser_Univer.service.cs" />
+    <Compile Include="Interfaces\IUser_UniverService.cs" />
+    <Compile Include="Interfaces\IViewMaterial.service.cs" />
+    <Compile Include="Interfaces\IViewUserMaterial.service.cs" />
+    <Compile Include="Meta\ArticleMeta.cs" />
+    <Compile Include="Meta\Comment.meta.cs" />
+    <Compile Include="Meta\ConferenceMeta.cs" />
+    <Compile Include="Meta\Contact.meta.cs" />
+    <Compile Include="Meta\DiscussionMeta.cs" />
+    <Compile Include="Meta\Dummy_SearchObject.meta.cs" />
+    <Compile Include="Meta\Event.meta.cs" />
+    <Compile Include="Meta\FileAttachment.meta.cs" />
+    <Compile Include="Meta\GrantMeta.cs" />
+    <Compile Include="Meta\Journal.meta.cs" />
+    <Compile Include="Meta\Language.meta.cs" />
+    <Compile Include="Meta\MessageTemplateMeta.cs" />
+    <Compile Include="Meta\Notification.meta.cs" />
+    <Compile Include="Meta\Organization.meta.cs" />
+    <Compile Include="Meta\Organization_Dept.meta.cs" />
+    <Compile Include="Meta\Organization_User.meta.cs" />
+    <Compile Include="Meta\OuterLink.meta.cs" />
+    <Compile Include="Meta\Paragraph.meta.cs" />
+    <Compile Include="Meta\Patent.meta.cs" />
+    <Compile Include="Meta\Photo.meta.cs" />
+    <Compile Include="Meta\PrivateMessageItem.meta.cs" />
+    <Compile Include="Meta\PrivateMessageMeta.cs" />
+    <Compile Include="Meta\PublicationLink.meta.cs" />
+    <Compile Include="Meta\Report.meta.cs" />
+    <Compile Include="Meta\Rubric.meta.cs" />
+    <Compile Include="Meta\SeminarMeta.cs" />
+    <Compile Include="Meta\Tag.meta.cs" />
+    <Compile Include="Meta\TechnoMeta.cs" />
+    <Compile Include="Meta\UserMeta.cs" />
+    <Compile Include="Meta\User_Degree.meta.cs" />
+    <Compile Include="Meta\User_FriendRequest.meta.cs" />
+    <Compile Include="Meta\User_Group.meta.cs" />
+    <Compile Include="Meta\User_Job.meta.cs" />
+    <Compile Include="Meta\User_Univer.meta.cs" />
+    <Compile Include="Meta\ViewMaterial.meta.cs" />
+    <Compile Include="Meta\ViewUserMaterial.meta.cs" />
+    <Compile Include="Models\SecurityModel.cs" />
+    <Compile Include="Objects\Article.object.cs" />
+    <Compile Include="Objects\ArticleObject.cs" />
+    <Compile Include="Objects\Comment.object.cs" />
+    <Compile Include="Objects\CommentObject.cs" />
+    <Compile Include="Objects\Conference.object.cs" />
+    <Compile Include="Objects\ConferenceObject.cs" />
+    <Compile Include="Objects\Contact.object.cs" />
+    <Compile Include="Objects\ContactObject.cs" />
+    <Compile Include="Objects\Discussion.object.cs" />
+    <Compile Include="Objects\DiscussionObject.cs" />
+    <Compile Include="Objects\Dummy_SearchObject.object.cs" />
+    <Compile Include="Objects\Event.object.cs" />
+    <Compile Include="Objects\EventObject.cs" />
+    <Compile Include="Objects\FileAttachment.object.cs" />
+    <Compile Include="Objects\FileAttachmentObject.cs" />
+    <Compile Include="Objects\Grant.object.cs" />
+    <Compile Include="Objects\GrantObject.cs" />
+    <Compile Include="Objects\Journal.object.cs" />
+    <Compile Include="Objects\JournalObject.cs" />
+    <Compile Include="Objects\Language.object.cs" />
+    <Compile Include="Objects\MessageTemplate.object.cs" />
+    <Compile Include="Objects\Notification.object.cs" />
+    <Compile Include="Objects\NotificationObject.cs" />
+    <Compile Include="Objects\Organization.object.cs" />
+    <Compile Include="Objects\OrganizationObject.cs" />
+    <Compile Include="Objects\Organization_Dept.object.cs" />
+    <Compile Include="Objects\Organization_DeptObject.cs" />
+    <Compile Include="Objects\Organization_User.object.cs" />
+    <Compile Include="Objects\Organization_UserObject.cs" />
+    <Compile Include="Objects\OuterLink.object.cs" />
+    <Compile Include="Objects\Paragraph.object.cs" />
+    <Compile Include="Objects\ParagraphObject.cs" />
+    <Compile Include="Objects\Patent.object.cs" />
+    <Compile Include="Objects\PatentObject.cs" />
+    <Compile Include="Objects\Photo.object.cs" />
+    <Compile Include="Objects\PrivateMessage.object.cs" />
+    <Compile Include="Objects\PrivateMessageItem.object.cs" />
+    <Compile Include="Objects\PrivateMessageItemObject.cs" />
+    <Compile Include="Objects\PrivateMessageObject.cs" />
+    <Compile Include="Objects\PublicationLink.object.cs" />
+    <Compile Include="Objects\Report.object.cs" />
+    <Compile Include="Objects\ReportObject.cs" />
+    <Compile Include="Objects\Rubric.cs" />
+    <Compile Include="Objects\Rubric.object.cs" />
+    <Compile Include="Objects\RubricObject.cs" />
+    <Compile Include="Objects\Seminar.object.cs" />
+    <Compile Include="Objects\SeminarObject.cs" />
+    <Compile Include="Objects\Tag.object.cs" />
+    <Compile Include="Objects\TagObject.cs" />
+    <Compile Include="Objects\Techno.object.cs" />
+    <Compile Include="Objects\TechnoObject.cs" />
+    <Compile Include="Objects\User.object.cs" />
+    <Compile Include="Objects\UserObject.cs" />
+    <Compile Include="Objects\User_Degree.object.cs" />
+    <Compile Include="Objects\User_DegreeObject.cs" />
+    <Compile Include="Objects\User_FriendRequest.object.cs" />
+    <Compile Include="Objects\User_Group.object.cs" />
+    <Compile Include="Objects\User_Job.object.cs" />
+    <Compile Include="Objects\User_JobObject.cs" />
+    <Compile Include="Objects\User_Univer.object.cs" />
+    <Compile Include="Objects\User_UniverObject.cs" />
+    <Compile Include="Objects\ViewMaterial.object.cs" />
+    <Compile Include="Objects\ViewUserMaterial.object.cs" />
+    <Compile Include="oilring.cs" />
+    <Compile Include="oilring.impl.cs">
+      <SubType>
+      </SubType>
+    </Compile>
+    <Compile Include="OilringDataService.cs" />
+    <Compile Include="OilringUpdater.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Security\UserPrincipal.cs" />
+    <Compile Include="Services\Article.service.cs" />
+    <Compile Include="Services\ArticleService.cs" />
+    <Compile Include="Services\Comment.service.cs" />
+    <Compile Include="Services\CommentService.cs" />
+    <Compile Include="Services\Conference.service.cs" />
+    <Compile Include="Services\ConferenceService.cs" />
+    <Compile Include="Services\Contact.service.cs" />
+    <Compile Include="Services\Discussion.service.cs" />
+    <Compile Include="Services\DiscussionService.cs" />
+    <Compile Include="Services\Dummy_SearchObject.service.cs" />
+    <Compile Include="Services\Dummy_SearchObjectService.cs" />
+    <Compile Include="Services\Event.service.cs" />
+    <Compile Include="Services\FileAttachment.service.cs" />
+    <Compile Include="Services\FileAttachmentService.cs" />
+    <Compile Include="Services\Grant.service.cs" />
+    <Compile Include="Services\GrantService.cs" />
+    <Compile Include="Services\Journal.service.cs" />
+    <Compile Include="Services\JournalService.cs" />
+    <Compile Include="Services\Language.service.cs" />
+    <Compile Include="Services\LanguageService.cs" />
+    <Compile Include="Services\MessageTemplate.service.cs" />
+    <Compile Include="Services\MessageTemplateService.cs" />
+    <Compile Include="Services\Notification.service.cs" />
+    <Compile Include="Services\NotificationService.cs" />
+    <Compile Include="Services\Organization.service.cs" />
+    <Compile Include="Services\OrganizationService.cs" />
+    <Compile Include="Services\Organization_Dept.service.cs" />
+    <Compile Include="Services\Organization_User.service.cs" />
+    <Compile Include="Services\OuterLink.service.cs" />
+    <Compile Include="Services\OuterLinkService.cs" />
+    <Compile Include="Services\Paragraph.service.cs" />
+    <Compile Include="Services\Patent.service.cs" />
+    <Compile Include="Services\Photo.service.cs" />
+    <Compile Include="Services\PhotoService.cs" />
+    <Compile Include="Services\PrivateMessageItem.service.cs" />
+    <Compile Include="Services\PrivateMessageService.cs" />
+    <Compile Include="Services\PublicationLink.service.cs" />
+    <Compile Include="Services\PublicationLinkService.cs" />
+    <Compile Include="Services\Report.service.cs" />
+    <Compile Include="Services\Rubric.service.cs" />
+    <Compile Include="Services\RubricService.cs" />
+    <Compile Include="Services\Seminar.service.cs" />
+    <Compile Include="Services\SeminarService.cs" />
+    <Compile Include="Services\Tag.service.cs" />
+    <Compile Include="Services\TagService.cs" />
+    <Compile Include="Services\Techno.service.cs" />
+    <Compile Include="Services\TechnoService.cs" />
+    <Compile Include="Services\User.service.cs" />
+    <Compile Include="Services\UserService.cs" />
+    <Compile Include="Services\User_Degree.service.cs" />
+    <Compile Include="Services\User_FriendRequest.service.cs" />
+    <Compile Include="Services\User_Group.service.cs" />
+    <Compile Include="Services\User_GroupService.cs" />
+    <Compile Include="Services\User_Job.service.cs" />
+    <Compile Include="Services\User_JobService.cs" />
+    <Compile Include="Services\User_Univer.service.cs" />
+    <Compile Include="Services\User_UniverService.cs" />
+    <Compile Include="Services\ViewMaterial.service.cs" />
+    <Compile Include="Services\ViewUserMaterial.service.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataAccess\Mappers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\common\common.csproj">
+      <Project>{211AC84C-7F73-414D-BDE1-661B98C68BD2}</Project>
+      <Name>common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\database\database.csproj">
+      <Project>{3036D203-0353-4044-BAC8-34E91A10FD17}</Project>
+      <Name>database</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\web.common\web.common.csproj">
+      <Project>{AF47A164-D1D2-4C79-97C6-5504B4323E01}</Project>
+      <Name>web.common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

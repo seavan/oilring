@@ -1,0 +1,18 @@
+USE oilring;
+DECLARE @Bitmask VARBINARY(300)
+SET @Bitmask = 0x0001000000FFFFFFFF0100000000000000060100000001610B00001000000FFFFFFFF0100000000000000060100000001610B
+
+DECLARE @RowInsertion int;
+SET @RowInsertion =  800000;
+
+WHILE @RowInsertion > 0
+BEGIN
+
+INSERT INTO testbitmask(bitmask) VALUES(@Bitmask + @RowInsertion);
+
+SET @RowInsertion = @RowInsertion - 1
+
+END
+GO
+
+

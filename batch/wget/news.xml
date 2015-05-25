@@ -1,0 +1,11 @@
+--2011-06-17 03:21:36--  http://lenta.ru/r/EX/import.xml
+Resolving lenta.ru... 81.19.85.116
+Connecting to lenta.ru|81.19.85.116|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 25056 (24K) [application/xml]
+Saving to: `import.xml'
+
+     0K .......... .......... ....                            100% 2,52M=0,009s
+
+2011-06-17 03:21:36 (2,52 MB/s) - `import.xml' saved [25056/25056]
+

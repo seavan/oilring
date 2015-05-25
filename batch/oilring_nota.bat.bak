@@ -1,0 +1,5 @@
+call vsvars32.bat
+sqlmetal /conn:"Data Source=oilring.notamedia.ru;Initial Catalog=oilring;Integrated Security=False;User id=oilring;Password=kimberlite_1414" /context:OilringContext /code:..\trunk\database\oilring.cs /namespace:Notamedia.Oilring.Database /language:C# /sprocs /pluralize
+sqlmetal /conn:"Data Source=oilring.notamedia.ru;Initial Catalog=oilring;Integrated Security=False;User id=oilring;Password=kimberlite_1414" /context:OilringContext /xml:..\trunk\database\oilring.xml /namespace:Notamedia.Oilring.Database /language:C# /sprocs /pluralize
+
+msxsl ..\trunk\database\oilring.xml tables.xsl FILENAME="..\trunk\database\oilring.xml" > tables.bat

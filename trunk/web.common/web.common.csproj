@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AF47A164-D1D2-4C79-97C6-5504B4323E01}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Web.Common</RootNamespace>
+    <AssemblyName>web.common</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\packages\Unity.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\packages\Unity.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.Web.Mvc">
+      <HintPath>..\libs\Telerik.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActionResults\AjaxAwareRedirectResult.cs" />
+    <Compile Include="Controllers\BaseUniversalController.cs" />
+    <Compile Include="Controllers\BasicController.cs" />
+    <Compile Include="Extensions\HtmlExtensions.cs" />
+    <Compile Include="Filters\BasicFilter.cs" />
+    <Compile Include="Filters\FilterList.cs" />
+    <Compile Include="Filters\IFilter.cs" />
+    <Compile Include="Filters\PageFilter.cs" />
+    <Compile Include="Html\IControlRenderer.cs" />
+    <Compile Include="Html\MvcContainer.cs" />
+    <Compile Include="IoC\HttpContextLifetimeManager.cs" />
+    <Compile Include="IoC\UnityControllerFactory.cs" />
+    <Compile Include="MessageStacker.cs" />
+    <Compile Include="Metadata\CustomMetadataProvider.cs" />
+    <Compile Include="Metadata\ICustomValueProvider.cs" />
+    <Compile Include="Metadata\ViewMapper.cs" />
+    <Compile Include="Models\BaseViewData.cs" />
+    <Compile Include="Models\PagerModel.cs" />
+    <Compile Include="Modules\Module.cs" />
+    <Compile Include="Modules\ModuleParams.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\Authorize403Attribute.cs" />
+    <Compile Include="Validation\Attributes\AmphibianValidatorAttribute.cs" />
+    <Compile Include="Validation\Attributes\ConditionalRequiredAttribute.cs" />
+    <Compile Include="Validation\Attributes\BasicDbLookupNegateValidatorAttribute.cs" />
+    <Compile Include="Validation\Attributes\BasicDbValidatorAttribute.cs" />
+    <Compile Include="Validation\Attributes\BasicValidatorAttribute.cs" />
+    <Compile Include="Validation\Attributes\EMailAttribute.cs" />
+    <Compile Include="Validation\CommonExtension.cs" />
+    <Compile Include="Validation\CustomModelValidator.cs" />
+    <Compile Include="Validation\CustomValidatorRepository.cs" />
+    <Compile Include="Validation\Attributes\EqualityValidator.cs" />
+    <Compile Include="Validation\ICustomValidationParams.cs" />
+    <Compile Include="Validation\ICustomValidator.cs" />
+    <Compile Include="Validation\IModelValidator.cs" />
+    <Compile Include="Validation\Attributes\NotEmptyValidator.cs" />
+    <Compile Include="Validation\Parsers\BasicOrdinalParser.cs" />
+    <Compile Include="Validation\Parsers\ICustomParser.cs" />
+    <Compile Include="Validation\Parsers\RegisteredParser.cs" />
+    <Compile Include="Validation\Attributes\ValidationParamsAttribute.cs" />
+    <Compile Include="Validation\WebModelValidator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\common\common.csproj">
+      <Project>{211AC84C-7F73-414D-BDE1-661B98C68BD2}</Project>
+      <Name>common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\database\database.csproj">
+      <Project>{3036D203-0353-4044-BAC8-34E91A10FD17}</Project>
+      <Name>database</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

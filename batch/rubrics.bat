@@ -1,0 +1,1 @@
+sqlcmd -S oilring.notamedia.ru -Uoilring -Pkimberlite_1414 -d oilring -iout.sql

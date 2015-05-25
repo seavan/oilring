@@ -1,0 +1,16 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Views/Shared/Site.Master" AutoEventWireup="true" CodeBehind="MainUserList.master.cs" Inherits="Notamedia.Oilring.Community.Views.Shared.MainUserList" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
+</asp:Content>
+<asp:Content ID="Page2" ContentPlaceHolderID="m_Page" runat="server">
+
+    <% Html.RenderPartial("HeaderBlock"); %>
+
+    <!--середина-->
+    <div id="mainwrap">
+        <% Html.RenderPartial("TopPanelBlockUserList"); %>
+        <% Html.RenderPartial("FilterBlockUserList"); %>
+        <asp:ContentPlaceHolder ID="m_Middle" runat="server"></asp:ContentPlaceHolder>
+    </div>
+    <!--/середина-->
+
+</asp:Content>

@@ -1,0 +1,7 @@
+2011/08/18 08:55:53 [notice] 1212#6568: signal process started
+2011/08/18 08:55:58 [notice] 4632#3024: signal process started
+2011/08/18 08:55:58 [error] 4632#3024: CreateFile() "D:\Projects\oilring\bin\nginx-1.1.0/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2011/08/18 08:56:15 [error] 7652#7640: *2 CreateFile() "O:/Content/images" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /Content/images HTTP/1.1", host: "localhost:81"
+2011/08/18 08:56:15 [error] 7652#7640: *2 CreateFile() "O:/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:81"
+2011/08/18 08:56:47 [error] 7652#7640: *2 CreateFile() "O:/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:81"
+2011/08/18 09:33:33 [error] 7652#7640: *53 CreateFile() "O:/images/Content/images/user/198/68e928c0-e3c8-4010-a3dd-ea7610c0579a.small.png" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /images//Content/images/user/198/68e928c0-e3c8-4010-a3dd-ea7610c0579a.small.png HTTP/1.1", host: "localhost:81", referrer: "http://localhost:44697/ru/Article/Edit/82"

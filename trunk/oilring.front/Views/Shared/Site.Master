@@ -1,0 +1,85 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>
+        Oilring.RU :: Социальная сеть :: Social Network
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
+    </title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="Keywords" content="" />
+    <meta name="Description" content="" />
+    <link rel="shortcut icon" href="/Content/css/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href='<%= Html.StaticFile("/css/main.css") %>' />
+    <link rel="stylesheet" type="text/css" href='<%= Html.StaticFile("/css/main_dev.css") %>' />
+    <link rel="stylesheet" type="text/css" href='<%= Html.StaticFile("/css/jquery-ui.css") %>' />
+
+
+    <script type="text/javascript" src='<%= Html.StaticFile("/js/jquery-1.6.js") %>'></script>
+    <script type="text/javascript" src='<%= Html.StaticFile("/js/jquery-ui.min.js") %>'></script>
+    <script type="text/javascript" src='<%= Html.StaticFile("/js/json2.js") %>'></script>
+
+
+    <script language="javascript" type="text/javascript" src="<%=Html.StaticScriptFile("/MicrosoftAjax.js") %>"></script>
+    <script language="javascript" type="text/javascript" src="<%=Html.StaticScriptFile("/MicrosoftMvcAjax.js") %>"></script>
+    <script language="javascript" type="text/javascript" src="<%=Html.StaticScriptFile("/MicrosoftMvcValidation.js") %>"></script>
+    <script language="javascript" type="text/javascript" src="<%=Html.StaticScriptFile("/ValidationWithEvents.js") %>"></script>
+
+    <script language="javascript" type="text/javascript" src="<%= Html.StaticFile("/js/uploader.js") %>"></script>
+    <script type="text/javascript" src='<%= Html.StaticFile("/js/autocomplete.js") %>'></script>
+    <script type="text/javascript" src='<%= Html.StaticFile("/js/hand.js") %>'></script>
+    <script type="text/javascript" src='<%= Html.StaticFile("/js/bak.js") %>'></script>
+    <script type="text/javascript" src='<%= Html.StaticFile("/js/filter.js") %>'></script> 
+    <script type="text/javascript" src='<%= Html.StaticFile("/js/filterUser.js") %>'></script>
+    <script type="text/javascript" src='<%= Html.StaticFile("/js/main.js") %>'></script>    
+    <script type="text/javascript" src='<%= Html.StaticFile("/js/controls.js") %>'></script>
+
+    <script type="text/javascript" src='<%= Html.StaticFile("/js/search.js") %>'></script>
+    <script type="text/javascript" src='<%= Html.StaticScriptFile("/ckeditor/ckeditor.js") %>'></script>
+
+    <script type="text/javascript" src='<%= Html.StaticFile("/js/authentication.js") %>'></script>
+    <script type="text/javascript" src='<%= Html.StaticFile("/js/registration.js") %>'></script>
+    
+    <script type="text/javascript" src='<%= Html.StaticFile("/js/calendar.js") %>'></script>
+    <script type="text/javascript" src='<%= Html.StaticFile("/js/validators.js") %>'></script>
+
+    <script type="text/javascript" src='<%= Html.StaticLocaledFile("/Rubric/GetRubricListScript") %>'></script>
+    <script type="text/javascript">
+        window.IMAGE_CONTENT_URI = '<%= RES.IMAGE_CONTENT_URI %>';
+    </script>
+</head>
+<body>
+    <div id="popups">
+    <asp:ContentPlaceHolder ID="m_Popups" runat="server" />
+    </div>
+    <div id="container">
+        <div id="container2">
+            
+            <asp:ContentPlaceHolder ID="m_Page" runat="server">
+            </asp:ContentPlaceHolder>
+            <!---подвал-->
+            <div id="footer" class="borderAll10">
+                <dfn><%= Html.LC().Footer_Copyright %></dfn>
+                <ul class="menuBot">
+                    <li><a href="#"><%= Html.LC().Menu_Users %></a></li>
+                    <li><a href="#"><%= Html.LC().Menu_Content %></a></li>
+                    <li><a href="#"><%= Html.LC().Menu_Organizations %></a></li>
+                    <li><a href="#"><%= Html.LC().Menu_AboutProject %></a></li>
+                </ul>
+                <div class="creator">
+                    <a href="http://notamedia.ru/"><%= Html.LC().Footer_Copyright_Developer %></a>2011</div>
+            </div>
+            <!---/подвал-->
+        </div>
+    </div>
+    <script language="javascript" type="text/javascript">
+        bindModule($('body'));
+        moduleRender('_module', true);
+        popupEnhancer();
+        //            initForm($('body'));
+        AttachAutocomplete($('body'));
+    
+    </script>
+</body>
+</html>

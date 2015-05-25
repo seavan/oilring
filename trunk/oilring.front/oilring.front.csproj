@@ -1,0 +1,1022 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5B224CC3-7216-485D-BACD-82851ABD3D12}</ProjectGuid>
+    <ProjectTypeGuids>{F85E285D-A4E0-4152-9332-AB1D724D3325};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Notamedia.Oilring.Community</RootNamespace>
+    <AssemblyName>oilring.front</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AntiXSSLibrary">
+      <HintPath>..\libs\AntiXSSLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Elmah">
+      <HintPath>..\libs\Elmah.dll</HintPath>
+    </Reference>
+    <Reference Include="Enyim.Caching">
+      <HintPath>..\libs\Enyim.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\libs\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlSanitizationLibrary">
+      <HintPath>..\libs\HtmlSanitizationLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Word, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Unity.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\packages\Unity.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="TidyNet">
+      <HintPath>..\libs\TidyNet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActionResults\AjaxAwareRedirectResult.cs" />
+    <Compile Include="Common\BaseSizes.cs" />
+    <Compile Include="Common\CaptchaImage.cs" />
+    <Compile Include="Common\CommunityControllerFactory.cs" />
+    <Compile Include="Common\FileSystemOperations.cs" />
+    <Compile Include="Common\PercentageDrawImage.cs" />
+    <Compile Include="Controllers\Article.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\Comment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\ConferenceController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\Dummy_SearchObject.controller.cs" />
+    <Compile Include="Controllers\LanguageController.cs" />
+    <Compile Include="Controllers\NotificationController.cs" />
+    <Compile Include="Controllers\PrivateMessageController.cs" />
+    <Compile Include="Controllers\PrivateMessageItem.controller.cs" />
+    <Compile Include="Controllers\SeminarController.cs" />
+    <Compile Include="Controllers\FileAttachmentController.cs" />
+    <Compile Include="Controllers\JournalController.cs" />
+    <Compile Include="Controllers\GrantController.cs" />
+    <Compile Include="Controllers\OrganizationController.cs" />
+    <Compile Include="Controllers\Discussion.controller.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\Event.controller.cs" />
+    <Compile Include="Controllers\HomeController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\Organization_Dept.controller.cs" />
+    <Compile Include="Controllers\Organization_User.controller.cs" />
+    <Compile Include="Controllers\OuterLink.controller.cs" />
+    <Compile Include="Controllers\Paragraph.controller.cs" />
+    <Compile Include="Controllers\Patent.cs" />
+    <Compile Include="Controllers\PublicationLinkController.cs" />
+    <Compile Include="Controllers\Report.cs" />
+    <Compile Include="Controllers\RubricController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\TagController.cs" />
+    <Compile Include="Controllers\Techno.controller.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\User_DegreeController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\User_GroupController.cs" />
+    <Compile Include="Controllers\User_JobController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\User_UniverController.cs" />
+    <Compile Include="Controllers\ViewMaterialController.cs" />
+    <Compile Include="Controllers\ViewUserMaterialController.cs" />
+    <Compile Include="Extensions\CustomEntityForm.cs" />
+    <Compile Include="Extensions\CustomForm.cs" />
+    <Compile Include="Extensions\CustomGroup.cs" />
+    <Compile Include="Extensions\CustomManyToManyEditor.cs" />
+    <Compile Include="Extensions\CustomSimpleGroup.cs" />
+    <Compile Include="Extensions\CustomSubmitRow.cs" />
+    <Compile Include="Extensions\CustomTagControl.cs" />
+    <Compile Include="Extensions\CustomUserForm.cs" />
+    <Compile Include="Extensions\CustomWrap.cs" />
+    <Compile Include="Extensions\DisplayMetaDataProvider.cs" />
+    <Compile Include="Extensions\IControl.cs" />
+    <Compile Include="Extensions\M2MRelation.cs" />
+    <Compile Include="Extensions\OilringExtension.cs" />
+    <Compile Include="Filters\ConvertEnumOptionalValuesAttribute.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Metadata\Attributes\AutoCompleteAttribute.cs" />
+    <Compile Include="Metadata\Attributes\IMetadataAttribute.cs" />
+    <Compile Include="Metadata\Attributes\RestrictedHtmlAttribute.cs" />
+    <Compile Include="ModelBinders\RestrictedTagsBinder.cs" />
+    <Compile Include="Modules\ArticleModule.cs" />
+    <Compile Include="Modules\CommentModule.cs" />
+    <Compile Include="Modules\ConferenceModule.cs" />
+    <Compile Include="Modules\ContactModule.cs" />
+    <Compile Include="Modules\DiscussionModule.cs" />
+    <Compile Include="Modules\Dummy_SearchObjectModule.cs" />
+    <Compile Include="Modules\EventModule.cs" />
+    <Compile Include="Modules\FileAttachmentModule.cs" />
+    <Compile Include="Modules\GrantModule.cs" />
+    <Compile Include="Modules\JournalModule.cs" />
+    <Compile Include="Modules\LanguageModule.cs" />
+    <Compile Include="Modules\NotificationModule.cs" />
+    <Compile Include="Modules\OrganizationModule.cs" />
+    <Compile Include="Modules\OuterLinkModule.cs" />
+    <Compile Include="Modules\PatentModule.cs" />
+    <Compile Include="Modules\PrivateMessageItemModule.cs" />
+    <Compile Include="Modules\PrivateMessageModule.cs" />
+    <Compile Include="Modules\PublicationLinkModule.cs" />
+    <Compile Include="Modules\RandomArticleModule.cs" />
+    <Compile Include="Modules\RandomConferenceModule.cs" />
+    <Compile Include="Modules\RandomDiscussionModule.cs" />
+    <Compile Include="Modules\RandomGrantModule.cs" />
+    <Compile Include="Modules\RandomSeminarModule.cs" />
+    <Compile Include="Modules\RandomTehnoModule.cs" />
+    <Compile Include="Modules\ReportModule.cs" />
+    <Compile Include="Modules\RubricModule.cs" />
+    <Compile Include="Modules\SeminarModule.cs" />
+    <Compile Include="Modules\TagModule.cs" />
+    <Compile Include="Modules\TechnoModule.cs" />
+    <Compile Include="Modules\UserActivityModule.cs" />
+    <Compile Include="Modules\UserModule.cs" />
+    <Compile Include="Modules\User_DegreeModule.cs" />
+    <Compile Include="Modules\User_GroupModule.cs" />
+    <Compile Include="Modules\User_JobModule.cs" />
+    <Compile Include="Modules\User_UniverModule.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Shared\Main.master.cs">
+      <DependentUpon>Main.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\Main.master.designer.cs">
+      <DependentUpon>Main.master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\MainInner.master.cs">
+      <DependentUpon>MainInner.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\MainInner.master.designer.cs">
+      <DependentUpon>MainInner.master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\MainInnerNoMenu.master.cs">
+      <DependentUpon>MainInnerNoMenu.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\MainInnerNoMenu.master.designer.cs">
+      <DependentUpon>MainInnerNoMenu.master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\MainUser.master.cs">
+      <DependentUpon>MainUser.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\MainUser.master.designer.cs">
+      <DependentUpon>MainUser.master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\MainUserList.master.cs">
+      <DependentUpon>MainUserList.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\MainUserList.master.designer.cs">
+      <DependentUpon>MainUserList.master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\css\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Content\css\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Content\css\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Content\css\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Content\css\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Content\css\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\css\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Content\css\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Content\css\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Content\css\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\css\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Content\css\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Content\css\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Content\css\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\css\jquery-ui.css" />
+    <Content Include="Content\css\main_dev.css" />
+    <Content Include="Content\css\favicon.ico" />
+    <Content Include="Content\css\main.css" />
+    <Content Include="Content\css\PIE.htc" />
+    <Content Include="Content\images\banner.jpg" />
+    <Content Include="Content\images\bannerRGU.jpg" />
+    <Content Include="Content\images\code.gif" />
+    <Content Include="Content\images\formula.gif" />
+    <Content Include="Content\images\gerb.gif" />
+    <Content Include="Content\images\pic1.jpg" />
+    <Content Include="Content\images\pic10.jpg" />
+    <Content Include="Content\images\pic11.gif" />
+    <Content Include="Content\images\pic12.jpg" />
+    <Content Include="Content\images\pic13.gif" />
+    <Content Include="Content\images\pic14.jpg" />
+    <Content Include="Content\images\pic2.jpg" />
+    <Content Include="Content\images\pic3.jpg" />
+    <Content Include="Content\images\pic4.jpg" />
+    <Content Include="Content\images\pic5.jpg" />
+    <Content Include="Content\images\pic6.jpg" />
+    <Content Include="Content\images\pic7.jpg" />
+    <Content Include="Content\images\pic8.jpg" />
+    <Content Include="Content\images\pic9.jpg" />
+    <Content Include="Content\images\shareLinks.gif" />
+    <Content Include="Content\images\structure.gif" />
+    <Content Include="Content\images\structure2.gif" />
+    <Content Include="Content\i\arrowB.gif" />
+    <Content Include="Content\i\arrowD.png" />
+    <Content Include="Content\i\arrowL.gif" />
+    <Content Include="Content\i\arrowR.gif" />
+    <Content Include="Content\i\arrowTB.png" />
+    <Content Include="Content\i\bg01.jpg" />
+    <Content Include="Content\i\bg02.png" />
+    <Content Include="Content\i\bg03.gif" />
+    <Content Include="Content\i\bg03b.gif" />
+    <Content Include="Content\i\bg03_hide.gif" />
+    <Content Include="Content\i\bg04.gif" />
+    <Content Include="Content\i\bg05.gif" />
+    <Content Include="Content\i\bg06.png" />
+    <Content Include="Content\i\bg07.gif" />
+    <Content Include="Content\i\bg08.png" />
+    <Content Include="Content\i\bg09.gif" />
+    <Content Include="Content\i\bg10.gif" />
+    <Content Include="Content\i\bg11.gif" />
+    <Content Include="Content\i\bg12.gif" />
+    <Content Include="Content\i\bg13.gif" />
+    <Content Include="Content\i\bg14.png" />
+    <Content Include="Content\i\bg404.jpg" />
+    <Content Include="Content\i\bgScroll.gif" />
+    <Content Include="Content\i\bgScrollLine.gif" />
+    <Content Include="Content\i\bgSearch.png" />
+    <Content Include="Content\i\circle.gif" />
+    <Content Include="Content\i\close.gif" />
+    <Content Include="Content\i\default.mid.png" />
+    <Content Include="Content\i\default.png" />
+    <Content Include="Content\i\default.small.png" />
+    <Content Include="Content\i\icAdd.png" />
+    <Content Include="Content\i\icAdd2.png" />
+    <Content Include="Content\i\icBold.gif" />
+    <Content Include="Content\i\icCalendar.gif" />
+    <Content Include="Content\i\icComment.gif" />
+    <Content Include="Content\i\icComment2.gif" />
+    <Content Include="Content\i\icDelete.png" />
+    <Content Include="Content\i\icDelete2.gif" />
+    <Content Include="Content\i\icDoc.png" />
+    <Content Include="Content\i\icEdit.gif" />
+    <Content Include="Content\i\icFavorite.png" />
+    <Content Include="Content\i\icIcq.gif" />
+    <Content Include="Content\i\icItalic.gif" />
+    <Content Include="Content\i\icLupa.gif" />
+    <Content Include="Content\i\icMail.gif" />
+    <Content Include="Content\i\icOthers.png" />
+    <Content Include="Content\i\icPdf.png" />
+    <Content Include="Content\i\icPhone.gif" />
+    <Content Include="Content\i\icPpt.png" />
+    <Content Include="Content\i\icRar.png" />
+    <Content Include="Content\i\icRubric.gif" />
+    <Content Include="Content\i\icSkype.gif" />
+    <Content Include="Content\i\icStructure.gif" />
+    <Content Include="Content\i\icUnderline.gif" />
+    <Content Include="Content\i\icUpdate.gif" />
+    <Content Include="Content\i\icXls.png" />
+    <Content Include="Content\i\icZip.png" />
+    <Content Include="Content\i\li.gif" />
+    <Content Include="Content\i\logo.png" />
+    <Content Include="Content\i\nota.gif" />
+    <Content Include="Content\i\online.png" />
+    <Content Include="Content\i\pix.gif" />
+    <Content Include="Content\i\preloader.gif" />
+    <Content Include="Content\i\promo1.jpg" />
+    <Content Include="Content\i\scrollPoint.png" />
+    <Content Include="Content\i\shadow1.png" />
+    <Content Include="Content\i\shadow2.png" />
+    <Content Include="Content\i\tree_half.gif" />
+    <Content Include="Content\i\tree_leaf.gif" />
+    <Content Include="Content\i\tree_line.gif" />
+    <Content Include="Content\i\tree_minus.gif" />
+    <Content Include="Content\i\tree_plus.gif" />
+    <Content Include="Content\js\authentication.js" />
+    <Content Include="Content\js\autocomplete.js" />
+    <Content Include="Content\js\bak.js" />
+    <Content Include="Content\js\controls.js" />
+    <Content Include="Content\js\calendar.js" />
+    <Content Include="Content\js\filterUser.js" />
+    <Content Include="Content\js\form.js" />
+    <Content Include="Content\js\filter.js" />
+    <Content Include="Content\js\hand.js" />
+    <Content Include="Content\js\jquery-1.6.js" />
+    <Content Include="Content\js\jquery-ui.min.js" />
+    <Content Include="Content\js\json2.js" />
+    <Content Include="Content\js\main.js" />
+    <Content Include="Content\js\registration.js" />
+    <Content Include="Content\js\search.js" />
+    <Content Include="Content\js\uploader.js" />
+    <Content Include="Content\js\validators.js" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\AjaxLoadedContentScriptFix.js" />
+    <Content Include="Scripts\ckeditor\adapters\jquery.js" />
+    <Content Include="Scripts\ckeditor\ckeditor.js" />
+    <Content Include="Scripts\ckeditor\ckeditor_basic.js" />
+    <Content Include="Scripts\ckeditor\config.js" />
+    <Content Include="Scripts\ckeditor\contents.css" />
+    <Content Include="Scripts\ckeditor\images\spacer.gif" />
+    <Content Include="Scripts\ckeditor\lang\af.js" />
+    <Content Include="Scripts\ckeditor\lang\ar.js" />
+    <Content Include="Scripts\ckeditor\lang\bg.js" />
+    <Content Include="Scripts\ckeditor\lang\bn.js" />
+    <Content Include="Scripts\ckeditor\lang\bs.js" />
+    <Content Include="Scripts\ckeditor\lang\ca.js" />
+    <Content Include="Scripts\ckeditor\lang\cs.js" />
+    <Content Include="Scripts\ckeditor\lang\cy.js" />
+    <Content Include="Scripts\ckeditor\lang\da.js" />
+    <Content Include="Scripts\ckeditor\lang\de.js" />
+    <Content Include="Scripts\ckeditor\lang\el.js" />
+    <Content Include="Scripts\ckeditor\lang\en-au.js" />
+    <Content Include="Scripts\ckeditor\lang\en-ca.js" />
+    <Content Include="Scripts\ckeditor\lang\en-gb.js" />
+    <Content Include="Scripts\ckeditor\lang\en.js" />
+    <Content Include="Scripts\ckeditor\lang\eo.js" />
+    <Content Include="Scripts\ckeditor\lang\es.js" />
+    <Content Include="Scripts\ckeditor\lang\et.js" />
+    <Content Include="Scripts\ckeditor\lang\eu.js" />
+    <Content Include="Scripts\ckeditor\lang\fa.js" />
+    <Content Include="Scripts\ckeditor\lang\fi.js" />
+    <Content Include="Scripts\ckeditor\lang\fo.js" />
+    <Content Include="Scripts\ckeditor\lang\fr-ca.js" />
+    <Content Include="Scripts\ckeditor\lang\fr.js" />
+    <Content Include="Scripts\ckeditor\lang\gl.js" />
+    <Content Include="Scripts\ckeditor\lang\gu.js" />
+    <Content Include="Scripts\ckeditor\lang\he.js" />
+    <Content Include="Scripts\ckeditor\lang\hi.js" />
+    <Content Include="Scripts\ckeditor\lang\hr.js" />
+    <Content Include="Scripts\ckeditor\lang\hu.js" />
+    <Content Include="Scripts\ckeditor\lang\is.js" />
+    <Content Include="Scripts\ckeditor\lang\it.js" />
+    <Content Include="Scripts\ckeditor\lang\ja.js" />
+    <Content Include="Scripts\ckeditor\lang\ka.js" />
+    <Content Include="Scripts\ckeditor\lang\km.js" />
+    <Content Include="Scripts\ckeditor\lang\ko.js" />
+    <Content Include="Scripts\ckeditor\lang\lt.js" />
+    <Content Include="Scripts\ckeditor\lang\lv.js" />
+    <Content Include="Scripts\ckeditor\lang\mn.js" />
+    <Content Include="Scripts\ckeditor\lang\ms.js" />
+    <Content Include="Scripts\ckeditor\lang\nb.js" />
+    <Content Include="Scripts\ckeditor\lang\nl.js" />
+    <Content Include="Scripts\ckeditor\lang\no.js" />
+    <Content Include="Scripts\ckeditor\lang\pl.js" />
+    <Content Include="Scripts\ckeditor\lang\pt-br.js" />
+    <Content Include="Scripts\ckeditor\lang\pt.js" />
+    <Content Include="Scripts\ckeditor\lang\ro.js" />
+    <Content Include="Scripts\ckeditor\lang\ru.js" />
+    <Content Include="Scripts\ckeditor\lang\sk.js" />
+    <Content Include="Scripts\ckeditor\lang\sl.js" />
+    <Content Include="Scripts\ckeditor\lang\sr-latn.js" />
+    <Content Include="Scripts\ckeditor\lang\sr.js" />
+    <Content Include="Scripts\ckeditor\lang\sv.js" />
+    <Content Include="Scripts\ckeditor\lang\th.js" />
+    <Content Include="Scripts\ckeditor\lang\tr.js" />
+    <Content Include="Scripts\ckeditor\lang\uk.js" />
+    <Content Include="Scripts\ckeditor\lang\vi.js" />
+    <Content Include="Scripts\ckeditor\lang\zh-cn.js" />
+    <Content Include="Scripts\ckeditor\lang\zh.js" />
+    <Content Include="Scripts\ckeditor\lang\_languages.js" />
+    <Content Include="Scripts\ckeditor\lang\_translationstatus.txt" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\en.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\he.js" />
+    <Content Include="Scripts\ckeditor\plugins\about\dialogs\about.js" />
+    <Content Include="Scripts\ckeditor\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="Scripts\ckeditor\plugins\adobeair\plugin.js" />
+    <Content Include="Scripts\ckeditor\plugins\ajax\plugin.js" />
+    <Content Include="Scripts\ckeditor\plugins\autogrow\plugin.js" />
+    <Content Include="Scripts\ckeditor\plugins\bbcode\plugin.js" />
+    <Content Include="Scripts\ckeditor\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="Scripts\ckeditor\plugins\colordialog\dialogs\colordialog.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\en.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\plugin.js" />
+    <Content Include="Scripts\ckeditor\plugins\dialog\dialogDefinition.js" />
+    <Content Include="Scripts\ckeditor\plugins\div\dialogs\div.js" />
+    <Content Include="Scripts\ckeditor\plugins\docprops\dialogs\docprops.js" />
+    <Content Include="Scripts\ckeditor\plugins\docprops\plugin.js" />
+    <Content Include="Scripts\ckeditor\plugins\equation\images\._equation.gif" />
+    <Content Include="Scripts\ckeditor\plugins\equation\images\equation.gif" />
+    <Content Include="Scripts\ckeditor\plugins\equation\lang\en.js" />
+    <Content Include="Scripts\ckeditor\plugins\equation\plugin.js" />
+    <Content Include="Scripts\ckeditor\plugins\find\dialogs\find.js" />
+    <Content Include="Scripts\ckeditor\plugins\flash\dialogs\flash.js" />
+    <Content Include="Scripts\ckeditor\plugins\flash\images\placeholder.png" />
+    <Content Include="Scripts\ckeditor\plugins\forms\dialogs\button.js" />
+    <Content Include="Scripts\ckeditor\plugins\forms\dialogs\checkbox.js" />
+    <Content Include="Scripts\ckeditor\plugins\forms\dialogs\form.js" />
+    <Content Include="Scripts\ckeditor\plugins\forms\dialogs\hiddenfield.js" />
+    <Content Include="Scripts\ckeditor\plugins\forms\dialogs\radio.js" />
+    <Content Include="Scripts\ckeditor\plugins\forms\dialogs\select.js" />
+    <Content Include="Scripts\ckeditor\plugins\forms\dialogs\textarea.js" />
+    <Content Include="Scripts\ckeditor\plugins\forms\dialogs\textfield.js" />
+    <Content Include="Scripts\ckeditor\plugins\forms\images\hiddenfield.gif" />
+    <Content Include="Scripts\ckeditor\plugins\iframedialog\plugin.js" />
+    <Content Include="Scripts\ckeditor\plugins\iframe\dialogs\iframe.js" />
+    <Content Include="Scripts\ckeditor\plugins\iframe\images\placeholder.png" />
+    <Content Include="Scripts\ckeditor\plugins\image\dialogs\image.js" />
+    <Content Include="Scripts\ckeditor\plugins\link\dialogs\anchor.js" />
+    <Content Include="Scripts\ckeditor\plugins\link\dialogs\link.js" />
+    <Content Include="Scripts\ckeditor\plugins\link\images\anchor.gif" />
+    <Content Include="Scripts\ckeditor\plugins\liststyle\dialogs\liststyle.js" />
+    <Content Include="Scripts\ckeditor\plugins\pagebreak\images\pagebreak.gif" />
+    <Content Include="Scripts\ckeditor\plugins\pastefromword\filter\default.js" />
+    <Content Include="Scripts\ckeditor\plugins\pastetext\dialogs\pastetext.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\dialogs\placeholder.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\en.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\he.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\placeholder.gif" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\plugin.js" />
+    <Content Include="Scripts\ckeditor\plugins\scayt\dialogs\options.js" />
+    <Content Include="Scripts\ckeditor\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_address.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_blockquote.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_div.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_h1.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_h2.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_h3.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_h4.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_h5.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_h6.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_p.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_pre.png" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\dialogs\smiley.js" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\angel_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\angry_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\broken_heart.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\confused_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\cry_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\devil_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\embaressed_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\envelope.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\heart.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\kiss.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\lightbulb.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\omg_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\regular_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\sad_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\shades_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\teeth_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\thumbs_down.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\thumbs_up.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\tounge_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\whatchutalkingabout_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\wink_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\lang\en.js" />
+    <Content Include="Scripts\ckeditor\plugins\stylesheetparser\plugin.js" />
+    <Content Include="Scripts\ckeditor\plugins\styles\styles\default.js" />
+    <Content Include="Scripts\ckeditor\plugins\tableresize\plugin.js" />
+    <Content Include="Scripts\ckeditor\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="Scripts\ckeditor\plugins\table\dialogs\table.js" />
+    <Content Include="Scripts\ckeditor\plugins\templates\dialogs\templates.js" />
+    <Content Include="Scripts\ckeditor\plugins\templates\templates\default.js" />
+    <Content Include="Scripts\ckeditor\plugins\templates\templates\images\template1.gif" />
+    <Content Include="Scripts\ckeditor\plugins\templates\templates\images\template2.gif" />
+    <Content Include="Scripts\ckeditor\plugins\templates\templates\images\template3.gif" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\dialogs\uicolor.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\en.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\he.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\plugin.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\uicolor.gif" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\yui\assets\hue_bg.png" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\yui\assets\hue_thumb.png" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\yui\assets\picker_mask.png" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\yui\assets\picker_thumb.png" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\yui\assets\yui.css" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\yui\yui.js" />
+    <Content Include="Scripts\ckeditor\plugins\wsc\dialogs\ciframe.html" />
+    <Content Include="Scripts\ckeditor\plugins\wsc\dialogs\tmpFrameset.html" />
+    <Content Include="Scripts\ckeditor\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="Scripts\ckeditor\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="Scripts\ckeditor\plugins\xml\plugin.js" />
+    <Content Include="Scripts\ckeditor\skins\kama\dialog.css" />
+    <Content Include="Scripts\ckeditor\skins\kama\editor.css" />
+    <Content Include="Scripts\ckeditor\skins\kama\icons.png" />
+    <Content Include="Scripts\ckeditor\skins\kama\icons_rtl.png" />
+    <Content Include="Scripts\ckeditor\skins\kama\images\dialog_sides.gif" />
+    <Content Include="Scripts\ckeditor\skins\kama\images\dialog_sides.png" />
+    <Content Include="Scripts\ckeditor\skins\kama\images\dialog_sides_rtl.png" />
+    <Content Include="Scripts\ckeditor\skins\kama\images\mini.gif" />
+    <Content Include="Scripts\ckeditor\skins\kama\images\noimage.png" />
+    <Content Include="Scripts\ckeditor\skins\kama\images\sprites.png" />
+    <Content Include="Scripts\ckeditor\skins\kama\images\sprites_ie6.png" />
+    <Content Include="Scripts\ckeditor\skins\kama\images\toolbar_start.gif" />
+    <Content Include="Scripts\ckeditor\skins\kama\skin.js" />
+    <Content Include="Scripts\ckeditor\skins\kama\templates.css" />
+    <Content Include="Scripts\ckeditor\skins\office2003\dialog.css" />
+    <Content Include="Scripts\ckeditor\skins\office2003\editor.css" />
+    <Content Include="Scripts\ckeditor\skins\office2003\icons.png" />
+    <Content Include="Scripts\ckeditor\skins\office2003\icons_rtl.png" />
+    <Content Include="Scripts\ckeditor\skins\office2003\images\dialog_sides.gif" />
+    <Content Include="Scripts\ckeditor\skins\office2003\images\dialog_sides.png" />
+    <Content Include="Scripts\ckeditor\skins\office2003\images\dialog_sides_rtl.png" />
+    <Content Include="Scripts\ckeditor\skins\office2003\images\mini.gif" />
+    <Content Include="Scripts\ckeditor\skins\office2003\images\noimage.png" />
+    <Content Include="Scripts\ckeditor\skins\office2003\images\sprites.png" />
+    <Content Include="Scripts\ckeditor\skins\office2003\images\sprites_ie6.png" />
+    <Content Include="Scripts\ckeditor\skins\office2003\skin.js" />
+    <Content Include="Scripts\ckeditor\skins\office2003\templates.css" />
+    <Content Include="Scripts\ckeditor\skins\v2\dialog.css" />
+    <Content Include="Scripts\ckeditor\skins\v2\editor.css" />
+    <Content Include="Scripts\ckeditor\skins\v2\icons.png" />
+    <Content Include="Scripts\ckeditor\skins\v2\icons_rtl.png" />
+    <Content Include="Scripts\ckeditor\skins\v2\images\dialog_sides.gif" />
+    <Content Include="Scripts\ckeditor\skins\v2\images\dialog_sides.png" />
+    <Content Include="Scripts\ckeditor\skins\v2\images\dialog_sides_rtl.png" />
+    <Content Include="Scripts\ckeditor\skins\v2\images\mini.gif" />
+    <Content Include="Scripts\ckeditor\skins\v2\images\noimage.png" />
+    <Content Include="Scripts\ckeditor\skins\v2\images\sprites.png" />
+    <Content Include="Scripts\ckeditor\skins\v2\images\sprites_ie6.png" />
+    <Content Include="Scripts\ckeditor\skins\v2\images\toolbar_start.gif" />
+    <Content Include="Scripts\ckeditor\skins\v2\skin.js" />
+    <Content Include="Scripts\ckeditor\skins\v2\templates.css" />
+    <Content Include="Scripts\ckeditor\themes\default\theme.js" />
+    <Content Include="Scripts\CustomValidators.js" />
+    <Content Include="Scripts\jquery-ui-1.8.6.custom.js" />
+    <Content Include="Scripts\jquery-ui-1.8.6.custom.min.js" />
+    <Content Include="Scripts\ValidationWithEvents.debug.js" />
+    <Content Include="Scripts\ValidationWithEvents.js" />
+    <Content Include="Views\Article\RelatedListWidgetUser.ascx" />
+    <Content Include="Views\Article\Single.aspx" />
+    <Content Include="Views\Article\List.aspx" />
+    <Content Include="Views\Article\ListItems.ascx" />
+    <Content Include="Views\Article\ListWidget.ascx" />
+    <Content Include="Views\Article\ListWidget.sample.ascx" />
+    <Content Include="Views\Article\RandomRelatedListWidget.ascx" />
+    <Content Include="Views\Article\Edit.aspx" />
+    <Content Include="Views\Article\SingleWidget.ascx" />
+    <Content Include="Views\Comment\AddWidget.ascx" />
+    <Content Include="Views\Comment\ListItems.ascx" />
+    <Content Include="Views\Comment\ListWidget.ascx" />
+    <Content Include="Views\Conference\AuthorBlock.ascx" />
+    <Content Include="Views\Conference\Edit.aspx" />
+    <Content Include="Views\Conference\ItemForEdit.ascx" />
+    <Content Include="Views\Conference\List.aspx" />
+    <Content Include="Views\Conference\ListItems.ascx" />
+    <Content Include="Views\Conference\OrganizationBlock.ascx" />
+    <Content Include="Views\Conference\RandomRelatedListWidget.ascx" />
+    <Content Include="Views\Conference\ReportBlock.ascx" />
+    <Content Include="Views\Conference\Single.aspx" />
+    <Content Include="Views\Conference\SingleCycleWidgetForEdit.ascx" />
+    <Content Include="Views\Conference\SingleWidget.ascx" />
+    <Content Include="Views\Conference\Visitors.ascx" />
+    <Content Include="Views\Conference\VisitorsSingle.ascx" />
+    <Content Include="Views\Contact\ListItemForEdit.ascx" />
+    <Content Include="Views\Contact\ListWidgetUser.ascx" />
+    <Content Include="Views\Contact\RelatedEditWidget.ascx" />
+    <Content Include="Views\Discussion\Edit.aspx" />
+    <Content Include="Views\Discussion\List.aspx" />
+    <Content Include="Views\Discussion\ListItems.ascx" />
+    <Content Include="Views\Discussion\ListWidget.ascx" />
+    <Content Include="Views\Discussion\RandomRelatedListWidget.ascx" />
+    <Content Include="Views\Discussion\Single.aspx" />
+    <Content Include="Views\Discussion\SingleWidget.ascx" />
+    <Content Include="Views\Event\Edit.aspx" />
+    <Content Include="Views\Event\List.aspx" />
+    <Content Include="Views\Event\ListItems.ascx" />
+    <Content Include="Views\Event\ListWidget.ascx" />
+    <Content Include="Views\Event\SearchResult.sample.ascx" />
+    <Content Include="Views\Event\Single.aspx" />
+    <Content Include="Views\Event\SingleWidget.ascx" />
+    <Content Include="Views\FileAttachment\ListWidget.ascx" />
+    <Content Include="Views\FileAttachment\RelatedEditWidget.ascx" />
+    <Content Include="Views\FileAttachment\RelatedListWidgetForEdit.ascx" />
+    <Content Include="Views\Grant\Edit.aspx" />
+    <Content Include="Views\Grant\List.aspx" />
+    <Content Include="Views\Grant\ListItemForEdit.ascx" />
+    <Content Include="Views\Grant\ListItems.ascx" />
+    <Content Include="Views\Grant\ListWidget.ascx" />
+    <Content Include="Views\Grant\OrganizationBlock.ascx" />
+    <Content Include="Views\Grant\RandomRelatedListWidget.ascx" />
+    <Content Include="Views\Grant\RelatedEditWidget.ascx" />
+    <Content Include="Views\Grant\RelatedListWidgetForEdit.ascx" />
+    <Content Include="Views\Grant\RelatedListWidgetTechno.ascx" />
+    <Content Include="Views\Grant\Single.aspx" />
+    <Content Include="Views\Grant\SingleWidget.ascx" />
+    <Content Include="Views\Grant\VisitorsSingle.ascx" />
+    <Content Include="Views\Home\About.aspx" />
+    <Content Include="Views\Home\Error500.aspx" />
+    <Content Include="Views\Home\Error403.aspx" />
+    <Content Include="Views\Home\Error404.aspx" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Home\SearchResult.aspx" />
+    <Content Include="Views\Journal\Edit.aspx" />
+    <Content Include="Views\Journal\List.aspx" />
+    <Content Include="Views\Journal\ListItems.ascx" />
+    <Content Include="Views\Journal\Single.aspx" />
+    <Content Include="Views\Journal\Readers.ascx" />
+    <Content Include="Views\Journal\SingleWidget.ascx" />
+    <Content Include="Views\Language\ListForEdit.ascx" />
+    <Content Include="Views\Language\ListItemForEdit.ascx" />
+    <Content Include="Views\Language\ListWidgetUser.ascx" />
+    <Content Include="Views\Language\RelatedEditWidget.ascx" />
+    <Content Include="Views\MessageTemplate\List.sample.aspx" />
+    <Content Include="Views\MessageTemplate\ListItems.ascx" />
+    <Content Include="Views\MessageTemplate\ListWidget.sample.ascx" />
+    <Content Include="Views\MessageTemplate\SearchResult.sample.ascx" />
+    <Content Include="Views\MessageTemplate\Single.sample.aspx" />
+    <Content Include="Views\MessageTemplate\SingleItem.sample.ascx" />
+    <Content Include="Views\MessageTemplate\SingleWidget.sample.ascx" />
+    <Content Include="Views\Notification\List.sample.aspx" />
+    <Content Include="Views\Notification\ListItems.ascx" />
+    <Content Include="Views\Notification\ListWidget.sample.ascx" />
+    <Content Include="Views\Notification\SearchResult.sample.ascx" />
+    <Content Include="Views\Notification\Single.sample.aspx" />
+    <Content Include="Views\Notification\SingleItem.sample.ascx" />
+    <Content Include="Views\Notification\SingleWidget.sample.ascx" />
+    <Content Include="Views\Organization\List.aspx" />
+    <Content Include="Views\Organization\List.sample.aspx" />
+    <Content Include="Views\Organization\ListItemForEdit.ascx" />
+    <Content Include="Views\Organization\ListItems.ascx" />
+    <Content Include="Views\Organization\ListWidget.sample.ascx" />
+    <Content Include="Views\Organization\RelatedEditWidget.ascx" />
+    <Content Include="Views\Organization\RelatedListWidget.ascx" />
+    <Content Include="Views\Organization\RelatedListWidgetForEdit.ascx" />
+    <Content Include="Views\Organization\RelatedListWidgetMember.ascx" />
+    <Content Include="Views\Organization\RelatedListWidgetShort.ascx" />
+    <Content Include="Views\Organization\RelatedListWidgetTechno.ascx" />
+    <Content Include="Views\Organization\SearchResult.sample.ascx" />
+    <Content Include="Views\Organization\Single.aspx" />
+    <Content Include="Views\Organization\Single.sample.aspx" />
+    <Content Include="Views\Organization\SingleWidget.sample.ascx" />
+    <Content Include="Views\Organization_Dept\List.sample.ascx" />
+    <Content Include="Views\Organization_Dept\List.sample.aspx" />
+    <Content Include="Views\Organization_Dept\ListWidget.sample.ascx" />
+    <Content Include="Views\Organization_Dept\SearchResult.sample.ascx" />
+    <Content Include="Views\Organization_Dept\Single.sample.ascx" />
+    <Content Include="Views\Organization_Dept\Single.sample.aspx" />
+    <Content Include="Views\Organization_Dept\SingleWidget.sample.ascx" />
+    <Content Include="Views\Organization_User\List.sample.ascx" />
+    <Content Include="Views\Organization_User\List.sample.aspx" />
+    <Content Include="Views\Organization_User\ListWidget.sample.ascx" />
+    <Content Include="Views\Organization_User\SearchResult.sample.ascx" />
+    <Content Include="Views\Organization_User\Single.sample.ascx" />
+    <Content Include="Views\Organization_User\Single.sample.aspx" />
+    <Content Include="Views\Organization_User\SingleWidget.sample.ascx" />
+    <Content Include="Views\OuterLink\List.sample.aspx" />
+    <Content Include="Views\OuterLink\ListItems.sample.ascx" />
+    <Content Include="Views\OuterLink\ListWidget.sample.ascx" />
+    <Content Include="Views\OuterLink\RelatedEditWidget.ascx" />
+    <Content Include="Views\OuterLink\RelatedListWidget.ascx" />
+    <Content Include="Views\OuterLink\SearchResult.sample.ascx" />
+    <Content Include="Views\OuterLink\Single.sample.aspx" />
+    <Content Include="Views\OuterLink\SingleItem.sample.ascx" />
+    <Content Include="Views\OuterLink\SingleWidget.sample.ascx" />
+    <Content Include="Views\Paragraph\List.sample.ascx" />
+    <Content Include="Views\Paragraph\List.sample.aspx" />
+    <Content Include="Views\Paragraph\ListWidget.sample.ascx" />
+    <Content Include="Views\Paragraph\SearchResult.sample.ascx" />
+    <Content Include="Views\Paragraph\Single.sample.ascx" />
+    <Content Include="Views\Paragraph\Single.sample.aspx" />
+    <Content Include="Views\Paragraph\SingleWidget.sample.ascx" />
+    <Content Include="Views\Patent\ListItemForEdit.ascx" />
+    <Content Include="Views\Patent\RelatedEditWidget.ascx" />
+    <Content Include="Views\Patent\RelatedListWidgetForEdit.ascx" />
+    <Content Include="Views\Patent\RelatedListWidgetTechno.ascx" />
+    <Content Include="Views\PrivateMessageItem\List.sample.aspx" />
+    <Content Include="Views\PrivateMessageItem\ListItems.ascx" />
+    <Content Include="Views\PrivateMessageItem\ListWidget.sample.ascx" />
+    <Content Include="Views\PrivateMessageItem\SearchResult.sample.ascx" />
+    <Content Include="Views\PrivateMessageItem\Single.sample.aspx" />
+    <Content Include="Views\PrivateMessageItem\SingleItem.sample.ascx" />
+    <Content Include="Views\PrivateMessageItem\SingleWidget.sample.ascx" />
+    <Content Include="Views\PrivateMessage\AddMessageBlockPopup.ascx" />
+    <Content Include="Views\PrivateMessage\AddWidget.ascx" />
+    <Content Include="Views\PrivateMessage\AddMessageBlockPopup2.ascx" />
+    <Content Include="Views\PrivateMessage\Single.aspx" />
+    <Content Include="Views\PrivateMessage\List.sample.aspx" />
+    <Content Include="Views\PrivateMessage\ListItems.ascx" />
+    <Content Include="Views\PrivateMessage\ListWidget.sample.ascx" />
+    <Content Include="Views\PrivateMessage\SearchResult.sample.ascx" />
+    <Content Include="Views\PrivateMessage\Single.sample.aspx" />
+    <Content Include="Views\PrivateMessage\SingleItem.sample.ascx" />
+    <Content Include="Views\PrivateMessage\SingleWidget.sample.ascx" />
+    <Content Include="Views\PublicationLink\ListItemForEdit.ascx" />
+    <Content Include="Views\PublicationLink\RelatedEditWidget.ascx" />
+    <Content Include="Views\PublicationLink\RelatedListWidgetForEdit.ascx" />
+    <Content Include="Views\PublicationLink\RelatedListWidgetShort.ascx" />
+    <Content Include="Views\PublicationLink\List.sample.aspx" />
+    <Content Include="Views\PublicationLink\ListItems.sample.ascx" />
+    <Content Include="Views\PublicationLink\ListWidget.sample.ascx" />
+    <Content Include="Views\PublicationLink\RelatedListWidget.ascx" />
+    <Content Include="Views\PublicationLink\SearchResult.sample.ascx" />
+    <Content Include="Views\PublicationLink\Single.sample.aspx" />
+    <Content Include="Views\PublicationLink\SingleItem.sample.ascx" />
+    <Content Include="Views\PublicationLink\SingleWidget.sample.ascx" />
+    <Content Include="Views\Report\RelatedEditWidget.ascx" />
+    <Content Include="Views\Report\RelatedListWidget.ascx" />
+    <Content Include="Views\Report\RelatedListWidgetForEdit.ascx" />
+    <Content Include="Views\Rubric\MyChoice.ascx" />
+    <Content Include="Views\Rubric\RelatedListWidget2.ascx" />
+    <Content Include="Views\Rubric\RelatedEditWidget.ascx" />
+    <Content Include="Views\Rubric\List.sample.ascx" />
+    <Content Include="Views\Rubric\List.sample.aspx" />
+    <Content Include="Views\Rubric\ListWidget.sample.ascx" />
+    <Content Include="Views\Rubric\RelatedListWidget.ascx" />
+    <Content Include="Views\Rubric\SearchResult.sample.ascx" />
+    <Content Include="Views\Rubric\Single.aspx" />
+    <Content Include="Views\Rubric\Single.sample.ascx" />
+    <Content Include="Views\Rubric\Single.sample.aspx" />
+    <Content Include="Views\Rubric\SingleWidget.sample.ascx" />
+    <Content Include="Views\Seminar\AuthorBlock.ascx" />
+    <Content Include="Views\Seminar\SingleCycleWidgetForEdit.ascx" />
+    <Content Include="Views\Seminar\Edit.aspx" />
+    <Content Include="Views\Seminar\List.aspx" />
+    <Content Include="Views\Seminar\ListItems.ascx" />
+    <Content Include="Views\Seminar\ListWidget.ascx" />
+    <Content Include="Views\Seminar\OrganizationBlock.ascx" />
+    <Content Include="Views\Seminar\RandomRelatedListWidget.ascx" />
+    <Content Include="Views\Seminar\ItemForEdit.ascx" />
+    <Content Include="Views\Seminar\ReportBlock.ascx" />
+    <Content Include="Views\Seminar\SearchResult.sample.ascx" />
+    <Content Include="Views\Seminar\Single.aspx" />
+    <Content Include="Views\Seminar\SingleWidget.ascx" />
+    <Content Include="Views\Seminar\VisitorsSingle.ascx" />
+    <Content Include="Views\Shared\AlphabetFilter.ascx" />
+    <Content Include="Views\Shared\ArticleBlock.ascx" />
+    <Content Include="Views\Shared\BannerBlock.ascx" />
+    <Content Include="Views\Shared\Calendar.ascx" />
+    <Content Include="Views\Shared\AddToFriendsBlock.ascx" />
+    <Content Include="Views\Shared\CalendarInner.ascx" />
+    <Content Include="Views\Shared\EditorTemplates\TextAreaBox.ascx" />
+    <Content Include="Views\Shared\EditorTemplates\Password.ascx" />
+    <Content Include="Views\Shared\EditorTemplates\CustomCombo.ascx" />
+    <Content Include="Views\Shared\JoinEventBlock.ascx" />
+    <Content Include="Views\Shared\EntityTypeFilter.ascx" />
+    <Content Include="Views\Shared\FavouriteBlock.ascx" />
+    <Content Include="Views\Shared\Edit.aspx" />
+    <Content Include="Views\Shared\EditorTemplates\Date.ascx" />
+    <Content Include="Views\Shared\PagerJS.ascx" />
+    <Content Include="Views\Shared\HeaderBlock.ascx" />
+    <Content Include="Views\Shared\HeaderNoAuthBlock.ascx" />
+    <Content Include="Views\Shared\Publish.aspx" />
+    <Content Include="Views\Shared\EditBlock.ascx" />
+    <Content Include="Views\Shared\DownloadBlockVertical.ascx" />
+    <Content Include="Views\Shared\DownloadBlockHorizontal.ascx" />
+    <Content Include="Views\Shared\DiscussionBlock.ascx" />
+    <Content Include="Views\Shared\EditorTemplates\TelerikHtml.ascx" />
+    <Content Include="Views\Shared\EditorTemplates\String.ascx" />
+    <Content Include="Views\Shared\EventBlock.ascx" />
+    <Content Include="Views\Shared\FilterBlock.ascx" />
+    <Content Include="Views\Shared\FilterBlockUserList.ascx" />
+    <Content Include="Views\Shared\GrantBlock.ascx" />
+    <Content Include="Views\Shared\HeaderAuthBlock.ascx" />
+    <Content Include="Views\Shared\InvitationBlock.ascx" />
+    <Content Include="Views\Shared\LangSelectorBlock.ascx" />
+    <Content Include="Views\Shared\Main.master" />
+    <Content Include="Views\Shared\MainInner.master" />
+    <Content Include="Views\Shared\Menu.ascx" />
+    <Content Include="Views\Shared\MenuSearch.ascx" />
+    <Content Include="Views\Shared\MenuTopBlock.ascx" />
+    <Content Include="Views\Shared\Pager.ascx" />
+    <Content Include="Views\Shared\PromoBlock.ascx" />
+    <Content Include="Views\Shared\UniversalRelatedListWidgetUser.ascx" />
+    <Content Include="Views\Shared\SearchBlock.ascx" />
+    <Content Include="Views\Shared\SearchResult.ascx" />
+    <Content Include="Views\Shared\SeminarBlock.ascx" />
+    <Content Include="Views\Shared\Single.aspx" />
+    <Content Include="Views\Shared\SocialShare.ascx" />
+    <Content Include="Views\Shared\Site.Master" />
+    <Content Include="Views\Shared\TopPanelBlock.ascx" />
+    <Content Include="Views\Shared\TopPanelBlockUserList.ascx" />
+    <Content Include="Views\Tag\RelatedEditWidget.ascx" />
+    <Content Include="Views\Tag\RelatedListWidget.ascx" />
+    <Content Include="Views\Tag\List.sample.aspx" />
+    <Content Include="Views\Tag\ListItems.sample.ascx" />
+    <Content Include="Views\Tag\ListWidget.ascx" />
+    <Content Include="Views\Tag\RelatedListWidgetForEdit.ascx" />
+    <Content Include="Views\Tag\RelatedListWidgetUser.ascx" />
+    <Content Include="Views\Tag\SearchResult.sample.ascx" />
+    <Content Include="Views\Tag\Single.aspx" />
+    <Content Include="Views\Tag\SingleItem.sample.ascx" />
+    <Content Include="Views\Tag\SingleWidget.sample.ascx" />
+    <Content Include="Views\Techno\Edit.aspx" />
+    <Content Include="Views\Techno\List.aspx" />
+    <Content Include="Views\Techno\ListItems.ascx" />
+    <Content Include="Views\Techno\RandomRelatedListWidget.ascx" />
+    <Content Include="Views\Techno\Single.aspx" />
+    <Content Include="Views\Seminar\Visitors.ascx" />
+    <Content Include="Views\Techno\SingleWidget.ascx" />
+    <Content Include="Views\User\Captcha.ascx" />
+    <Content Include="Views\User\ActivityWidget.ascx" />
+    <Content Include="Views\User\Activity.aspx" />
+    <Content Include="Views\User\FriendsWidget.ascx" />
+    <Content Include="Views\User\FriendsEdit.aspx" />
+    <Content Include="Views\User\RelatedListWidgetFriendsSelect.ascx" />
+    <Content Include="Views\User\RelatedListWidgetFriends.ascx" />
+    <Content Include="Views\User\Options.aspx" />
+    <Content Include="Views\User\OptionsWidget.ascx" />
+    <Content Include="Views\User\Friends.aspx" />
+    <Content Include="Views\User\FriendsEditWidget.ascx" />
+    <Content Include="Views\User\PrivateMessages.aspx" />
+    <Content Include="Views\User\PrivateMessagesWidget.ascx" />
+    <Content Include="Views\User\NotificationsWidget.ascx" />
+    <Content Include="Views\User\Notifications.aspx" />
+    <Content Include="Views\User\RecoveryPasswordGo.aspx" />
+    <Content Include="Views\User\Edit.aspx" />
+    <Content Include="Views\User\List.aspx" />
+    <Content Include="Views\User\ListItemForEdit.ascx" />
+    <Content Include="Views\User\ListItems.ascx" />
+    <Content Include="Views\User\Menu.ascx" />
+    <Content Include="Views\User\RecoveryPassword.aspx" />
+    <Content Include="Views\User\Register.aspx" />
+    <Content Include="Views\User\RegisterFinish.aspx" />
+    <Content Include="Views\User\RelatedEditWidgetAuthor.ascx" />
+    <Content Include="Views\User\RelatedListWidgetAuthor.ascx" />
+    <Content Include="Views\User\RelatedListWidgetContactUser.ascx" />
+    <Content Include="Views\User\RelatedListWidgetFriendsGroup.ascx" />
+    <Content Include="Views\User\RelatedListWidgetGrant.ascx" />
+    <Content Include="Views\User\RelatedListWidgetJournalDelegate.ascx" />
+    <Content Include="Views\User\RelatedListWidgetListMember.ascx" />
+    <Content Include="Views\User\RelatedListWidgetReport.ascx" />
+    <Content Include="Views\User\RelatedListWidgetSingleMember.ascx" />
+    <Content Include="Views\User\RelatedListWidgetSeminarParts.ascx" />
+    <Content Include="Views\User\RelatedListWidgetSeminar.ascx" />
+    <Content Include="Views\User\RelatedListWidgetArticle.ascx" />
+    <Content Include="Views\User\RelatedListWidgetDiscussion.ascx" />
+    <Content Include="Views\User\List.sample.ascx" />
+    <Content Include="Views\User\List.sample.aspx" />
+    <Content Include="Views\User\ListWidget.sample.ascx" />
+    <Content Include="Views\User\RelatedListWidgetTechno.ascx" />
+    <Content Include="Views\User\RelatedSingleWidget.ascx" />
+    <Content Include="Views\User\SearchResult.sample.ascx" />
+    <Content Include="Views\User\SignIn.aspx" />
+    <Content Include="Views\User\Single.aspx" />
+    <Content Include="Views\User\SingleWidget.ascx" />
+    <Content Include="Views\User\UserName.ascx" />
+    <Content Include="Views\User_Degree\ListItemForEdit.ascx" />
+    <Content Include="Views\User_Degree\ListWidget.ascx" />
+    <Content Include="Views\User_Degree\RelatedEditWidget.ascx" />
+    <Content Include="Views\User_Group\ListWidget.ascx" />
+    <Content Include="Views\User_Job\ListItemForEdit.ascx" />
+    <Content Include="Views\User_Job\ListWidget.ascx" />
+    <Content Include="Views\User_Job\RelatedEditWidget.ascx" />
+    <Content Include="Views\User_Univer\ListItemForEdit.ascx" />
+    <Content Include="Views\User_Univer\ListWidget.ascx" />
+    <Content Include="Views\User_Univer\RelatedEditWidget.ascx" />
+    <Content Include="Views\ViewUserMaterial\ListItems.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="App_GlobalResources\" />
+    <Folder Include="Containers\" />
+    <Folder Include="Content\temp\" />
+    <Folder Include="Factories\" />
+    <Folder Include="HtmlHelpers\" />
+    <Folder Include="Services\" />
+    <Folder Include="Validators\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\common\common.csproj">
+      <Project>{211AC84C-7F73-414D-BDE1-661B98C68BD2}</Project>
+      <Name>common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\database\database.csproj">
+      <Project>{3036D203-0353-4044-BAC8-34E91A10FD17}</Project>
+      <Name>database</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\oilring.database\oilring.database.csproj">
+      <Project>{A416E38F-E494-4384-81E1-C0E9280F18F0}</Project>
+      <Name>oilring.database</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\oilring.web.common\oilring.web.common.csproj">
+      <Project>{CBD7E002-3E77-4936-BA37-21007BDD47AF}</Project>
+      <Name>oilring.web.common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\web.common\web.common.csproj">
+      <Project>{AF47A164-D1D2-4C79-97C6-5504B4323E01}</Project>
+      <Name>web.common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\MainUserList.master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\MainUser.master" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\files\article\80\e321aeb6-a796-41e6-ab6c-5e60c595cbbf.dat" />
+    <Content Include="Views\Shared\MainInnerNoMenu.master" />
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <Target Name="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>44697</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="MonthStamp.DayStamp.Increment.None" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

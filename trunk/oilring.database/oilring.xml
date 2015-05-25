@@ -1,0 +1,1010 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="oilring" EntityNamespace="Notamedia.Oilring.Database" ContextNamespace="Notamedia.Oilring.Database" Class="OilringContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="dbo._AuthorLinks" Member="_AuthorLinks">
+    <Type Name="_AuthorLink">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ObjectId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ObjectType" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsUser" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="UserInfo" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo._CommentableVisitLinks" Member="_CommentableVisitLinks">
+    <Type Name="_CommentableVisitLink">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="REL_Id1" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType1" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="REL_Id2" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType2" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LastCommentCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LastVisitDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PreviousVisitDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo._ContactUserLinks" Member="_ContactUserLinks">
+    <Type Name="_ContactUserLink">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="REL_Id1" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType1" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="REL_Id2" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType2" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo._FriendLinks" Member="_FriendLinks">
+    <Type Name="_FriendLink">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="REL_Id1" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType1" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="REL_Id2" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType2" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="REL_User_Group_Id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo._GrantMemberLinks" Member="_GrantMemberLinks">
+    <Type Name="_GrantMemberLink">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="REL_Id1" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType1" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="REL_Id2" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType2" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo._GrantMemberRequestLinks" Member="_GrantMemberRequestLinks">
+    <Type Name="_GrantMemberRequestLink">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="REL_Id1" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType1" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="REL_Id2" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType2" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo._JournalArticleLinks" Member="_JournalArticleLinks">
+    <Type Name="_JournalArticleLink">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="REL_Id1" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType1" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="REL_Id2" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType2" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo._LanguageLinks" Member="_LanguageLinks">
+    <Type Name="_LanguageLink">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="REL_Id1" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType1" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="REL_Id2" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType2" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo._ObjectAuthorLinks" Member="_ObjectAuthorLinks">
+    <Type Name="_ObjectAuthorLink">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="REL_Id1" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType1" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="REL_Id2" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType2" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo._ObjectAuthorReaderLinks" Member="_ObjectAuthorReaderLinks">
+    <Type Name="_ObjectAuthorReaderLink">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="REL_Id1" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType1" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="REL_Id2" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType2" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo._ObjectJoinRejectLinks" Member="_ObjectJoinRejectLinks">
+    <Type Name="_ObjectJoinRejectLink">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="REL_Id1" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType1" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="REL_Id2" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType2" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo._ObjectJoinRequestLinks" Member="_ObjectJoinRequestLinks">
+    <Type Name="_ObjectJoinRequestLink">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="REL_Id1" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType1" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="REL_Id2" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType2" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo._ObjectUserDelegateLinks" Member="_ObjectUserDelegateLinks">
+    <Type Name="_ObjectUserDelegateLink">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="REL_Id1" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType1" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="REL_Id2" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType2" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo._ObjectUserReaderLinks" Member="_ObjectUserReaderLinks">
+    <Type Name="_ObjectUserReaderLink">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="REL_Id1" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType1" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="REL_Id2" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType2" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo._ObjectUserVisitorLinks" Member="_ObjectUserVisitorLinks">
+    <Type Name="_ObjectUserVisitorLink">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="REL_Id1" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType1" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="REL_Id2" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType2" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo._OrganizationLinks" Member="_OrganizationLinks">
+    <Type Name="_OrganizationLink">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="REL_Id1" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType1" Type="System.String" DbType="NChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="REL_Id2" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType2" Type="System.String" DbType="NChar(30) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo._OrganizationMemberLinks" Member="_OrganizationMemberLinks">
+    <Type Name="_OrganizationMemberLink">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="REL_Id1" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType1" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="REL_Id2" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType2" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo._OuterLinks" Member="_OuterLinks">
+    <Type Name="_OuterLink">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="REL_Id1" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType1" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="REL_Id2" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType2" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo._PublicationLinks" Member="_PublicationLinks">
+    <Type Name="_PublicationLink">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="REL_Id1" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType1" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="REL_Id2" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType2" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo._RubricLinks" Member="_RubricLinks">
+    <Type Name="_RubricLink">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="REL_Id1" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType1" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="REL_Id2" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType2" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo._ScholarUserLinks" Member="_ScholarUserLinks">
+    <Type Name="_ScholarUserLink">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="REL_Id1" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType1" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="REL_Id2" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType2" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo._TagLinks" Member="_TagLinks">
+    <Type Name="_TagLink">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="REL_Id1" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType1" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="REL_Id2" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType2" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo._TagRubricLinks" Member="_TagRubricLinks">
+    <Type Name="_TagRubricLink">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="REL_Id1" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType1" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="REL_Id2" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType2" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo._TechnoGrantLinks" Member="_TechnoGrantLinks">
+    <Type Name="_TechnoGrantLink">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="REL_Id1" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType1" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="REL_Id2" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType2" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo._UserFavouriteLinks" Member="_UserFavouriteLinks">
+    <Type Name="_UserFavouriteLink">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="REL_Id1" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType1" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="REL_Id2" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType2" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo._WorkerUserLinks" Member="_WorkerUserLinks">
+    <Type Name="_WorkerUserLink">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="REL_Id1" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType1" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="REL_Id2" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType2" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Articles" Member="Articles">
+    <Type Name="Article">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ObjectType" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Published" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Approved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Lang" Type="System.String" DbType="NChar(2)" CanBeNull="true" />
+      <Column Name="Owner_User_ID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="ShortDescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Text" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PublicationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModificationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AUTO_CommentCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AUTO_Comment_LastDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AUTO_DefaultPhoto_Guid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="AUTO_DefaultPhoto_Alt" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="PSEUDO_IsUserFavourite" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PSEUDO_NewCommentCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="FK_Comments_Articles" Member="Comments" ThisKey="Id,ObjectType" OtherKey="REL_Id,REL_ObjectType" Type="Comment" DeleteRule="NO ACTION" />
+      <Association Name="FK_FileAttachments_Articles" Member="FileAttachments" ThisKey="Id,ObjectType" OtherKey="REL_Id,REL_ObjectType" Type="FileAttachment" DeleteRule="NO ACTION" />
+      <Association Name="FK_Photos_Articles" Member="Photos" ThisKey="Id,ObjectType" OtherKey="REL_Id,REL_ObjectType" Type="Photo" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Comments" Member="Comments">
+    <Type Name="Comment">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ObjectType" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Published" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Approved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Lang" Type="System.String" DbType="NChar(2)" CanBeNull="true" />
+      <Column Name="REL_Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Parent_Comment_ID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Owner_User_ID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Text" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PublicationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModificationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AUTO_CommentCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="FK_Comments_Articles" Member="Article" ThisKey="REL_Id,REL_ObjectType" OtherKey="Id,ObjectType" Type="Article" IsForeignKey="true" />
+      <Association Name="FK_Comments_Conferences" Member="Conference" ThisKey="REL_Id,REL_ObjectType" OtherKey="Id,ObjectType" Type="Conference" IsForeignKey="true" />
+      <Association Name="FK_Comments_Discussions" Member="Discussion" ThisKey="REL_Id,REL_ObjectType" OtherKey="Id,ObjectType" Type="Discussion" IsForeignKey="true" />
+      <Association Name="FK_Comments_Events" Member="Event" ThisKey="REL_Id,REL_ObjectType" OtherKey="Id,ObjectType" Type="Event" IsForeignKey="true" />
+      <Association Name="FK_Comments_Grants" Member="Grant" ThisKey="REL_Id,REL_ObjectType" OtherKey="Id,ObjectType" Type="Grant" IsForeignKey="true" />
+      <Association Name="FK_Comments_Journals" Member="Journal" ThisKey="REL_Id,REL_ObjectType" OtherKey="Id,ObjectType" Type="Journal" IsForeignKey="true" />
+      <Association Name="FK_Comments_Seminars" Member="Seminar" ThisKey="REL_Id,REL_ObjectType" OtherKey="Id,ObjectType" Type="Seminar" IsForeignKey="true" />
+      <Association Name="FK_Comments_Technos" Member="Techno" ThisKey="REL_Id,REL_ObjectType" OtherKey="Id,ObjectType" Type="Techno" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Conferences" Member="Conferences">
+    <Type Name="Conference">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ObjectType" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Published" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Approved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Lang" Type="System.String" DbType="NChar(2)" CanBeNull="true" />
+      <Column Name="Owner_User_ID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="ShortDescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Text" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PublicationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModificationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AUTO_CommentCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EventStartDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EventEndDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Place" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="State" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AUTO_Comment_LastDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AUTO_DefaultPhoto_Guid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="AUTO_DefaultPhoto_Alt" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="AUTO_ObjectUserVisitorCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PSEUDO_IsUserFavourite" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PSEUDO_NewCommentCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsCycle" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="REL_Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="FK_Comments_Conferences" Member="Comments" ThisKey="Id,ObjectType" OtherKey="REL_Id,REL_ObjectType" Type="Comment" DeleteRule="NO ACTION" />
+      <Association Name="FK_FileAttachments_Conferences" Member="FileAttachments" ThisKey="Id,ObjectType" OtherKey="REL_Id,REL_ObjectType" Type="FileAttachment" DeleteRule="NO ACTION" />
+      <Association Name="FK_Photos_Conferences" Member="Photos" ThisKey="Id,ObjectType" OtherKey="REL_Id,REL_ObjectType" Type="Photo" DeleteRule="NO ACTION" />
+      <Association Name="FK_Reports_Conferences" Member="Reports" ThisKey="Id,ObjectType" OtherKey="REL_Id,REL_ObjectType" Type="Report" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Contacts" Member="Contacts">
+    <Type Name="Contact">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ObjectType" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Published" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Approved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Lang" Type="System.String" DbType="NChar(2)" CanBeNull="true" />
+      <Column Name="REL_Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Value" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PublicationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModificationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ContactType" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="FK_Contacts_Organizations" Member="Organization" ThisKey="REL_Id,REL_ObjectType" OtherKey="Id,ObjectType" Type="Organization" IsForeignKey="true" />
+      <Association Name="FK_Contacts_Users" Member="User" ThisKey="REL_Id,REL_ObjectType" OtherKey="Id,ObjectType" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Discussions" Member="Discussions">
+    <Type Name="Discussion">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ObjectType" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Published" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Approved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Lang" Type="System.String" DbType="NChar(2)" CanBeNull="true" />
+      <Column Name="Owner_User_ID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="ShortDescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Text" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PublicationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModificationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AUTO_CommentCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AUTO_Comment_LastDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AUTO_DefaultPhoto_Guid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="AUTO_DefaultPhoto_Alt" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="PSEUDO_IsUserFavourite" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PSEUDO_NewCommentCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="FK_Comments_Discussions" Member="Comments" ThisKey="Id,ObjectType" OtherKey="REL_Id,REL_ObjectType" Type="Comment" DeleteRule="NO ACTION" />
+      <Association Name="FK_FileAttachments_Discussions" Member="FileAttachments" ThisKey="Id,ObjectType" OtherKey="REL_Id,REL_ObjectType" Type="FileAttachment" DeleteRule="NO ACTION" />
+      <Association Name="FK_Photos_Discussions" Member="Photos" ThisKey="Id,ObjectType" OtherKey="REL_Id,REL_ObjectType" Type="Photo" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Dummy_SearchObjects" Member="Dummy_SearchObjects">
+    <Type Name="Dummy_SearchObject">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ObjectType" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Published" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Approved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Lang" Type="System.String" DbType="NChar(2)" CanBeNull="true" />
+      <Column Name="Owner_User_ID" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Text" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PublicationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModificationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Events" Member="Events">
+    <Type Name="Event">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ObjectType" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Published" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Approved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Lang" Type="System.String" DbType="NChar(2)" CanBeNull="true" />
+      <Column Name="Text" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="SourceTitle" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PublicationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModificationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AUTO_CommentCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SourceLink" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ShortDescription" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="AUTO_Comment_LastDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AUTO_DefaultPhoto_Guid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="AUTO_DefaultPhoto_Alt" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="PSEUDO_IsUserFavourite" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PSEUDO_NewCommentCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="FK_Comments_Events" Member="Comments" ThisKey="Id,ObjectType" OtherKey="REL_Id,REL_ObjectType" Type="Comment" DeleteRule="NO ACTION" />
+      <Association Name="FK_FileAttachments_Events" Member="FileAttachments" ThisKey="Id,ObjectType" OtherKey="REL_Id,REL_ObjectType" Type="FileAttachment" DeleteRule="NO ACTION" />
+      <Association Name="FK_Photos_Events" Member="Photos" ThisKey="Id,ObjectType" OtherKey="REL_Id,REL_ObjectType" Type="Photo" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FileAttachments" Member="FileAttachments">
+    <Type Name="FileAttachment">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ObjectType" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="REL_Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Published" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Approved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Lang" Type="System.String" DbType="NChar(2)" CanBeNull="true" />
+      <Column Name="Owner_User_ID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="UserFileName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Guid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PublicationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModificationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="OrigFileSize" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IsInText" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FileType" Type="System.String" DbType="NChar(3)" CanBeNull="true" />
+      <Column Name="IsConversionRequired" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsConverted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsConversionInProgress" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Content" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="IsError" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="FK_FileAttachments_Articles" Member="Article" ThisKey="REL_Id,REL_ObjectType" OtherKey="Id,ObjectType" Type="Article" IsForeignKey="true" />
+      <Association Name="FK_FileAttachments_Conferences" Member="Conference" ThisKey="REL_Id,REL_ObjectType" OtherKey="Id,ObjectType" Type="Conference" IsForeignKey="true" />
+      <Association Name="FK_FileAttachments_Discussions" Member="Discussion" ThisKey="REL_Id,REL_ObjectType" OtherKey="Id,ObjectType" Type="Discussion" IsForeignKey="true" />
+      <Association Name="FK_FileAttachments_Events" Member="Event" ThisKey="REL_Id,REL_ObjectType" OtherKey="Id,ObjectType" Type="Event" IsForeignKey="true" />
+      <Association Name="FK_FileAttachments_Grants" Member="Grant" ThisKey="REL_Id,REL_ObjectType" OtherKey="Id,ObjectType" Type="Grant" IsForeignKey="true" />
+      <Association Name="FK_FileAttachments_Journals" Member="Journal" ThisKey="REL_Id,REL_ObjectType" OtherKey="Id,ObjectType" Type="Journal" IsForeignKey="true" />
+      <Association Name="FK_FileAttachments_Technos" Member="Techno" ThisKey="REL_Id,REL_ObjectType" OtherKey="Id,ObjectType" Type="Techno" IsForeignKey="true" />
+      <Association Name="FK_FileAttachments_Users" Member="User" ThisKey="REL_Id,REL_ObjectType" OtherKey="Id,ObjectType" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Grants" Member="Grants">
+    <Type Name="Grant">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ObjectType" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Published" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Approved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Lang" Type="System.String" DbType="NChar(2)" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PublicationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModificationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AUTO_CommentCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Text" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="ShortDescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Owner_User_ID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Sum" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SumCurrency" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="OrderDeadline" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="AUTO_Comment_LastDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AUTO_DefaultPhoto_Guid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="AUTO_DefaultPhoto_Alt" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="PSEUDO_IsUserFavourite" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PSEUDO_NewCommentCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CompleteDeadline" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="FK_Comments_Grants" Member="Comments" ThisKey="Id,ObjectType" OtherKey="REL_Id,REL_ObjectType" Type="Comment" DeleteRule="NO ACTION" />
+      <Association Name="FK_FileAttachments_Grants" Member="FileAttachments" ThisKey="Id,ObjectType" OtherKey="REL_Id,REL_ObjectType" Type="FileAttachment" DeleteRule="NO ACTION" />
+      <Association Name="FK_Photos_Grants" Member="Photos" ThisKey="Id,ObjectType" OtherKey="REL_Id,REL_ObjectType" Type="Photo" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Journals" Member="Journals">
+    <Type Name="Journal">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ObjectType" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Published" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Approved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Lang" Type="System.String" DbType="NChar(2)" CanBeNull="true" />
+      <Column Name="Owner_User_ID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="ShortDescription" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="PdfFile" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ISBN" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="PublicationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AUTO_MaterialsCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AUTO_CommentCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModificationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AUTO_Comment_LastDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AUTO_ReadersCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AUTO_DefaultPhoto_Guid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="AUTO_DefaultPhoto_Alt" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="PSEUDO_IsUserFavourite" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PSEUDO_NewCommentCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="FK_Comments_Journals" Member="Comments" ThisKey="Id,ObjectType" OtherKey="REL_Id,REL_ObjectType" Type="Comment" DeleteRule="NO ACTION" />
+      <Association Name="FK_FileAttachments_Journals" Member="FileAttachments" ThisKey="Id,ObjectType" OtherKey="REL_Id,REL_ObjectType" Type="FileAttachment" DeleteRule="NO ACTION" />
+      <Association Name="FK_Photos_Journals" Member="Photos" ThisKey="Id,ObjectType" OtherKey="REL_Id,REL_ObjectType" Type="Photo" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Languages" Member="Languages">
+    <Type Name="Language">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ObjectType" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Published" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Approved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Lang" Type="System.String" DbType="NChar(2)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PublicationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModificationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MessageTemplates" Member="MessageTemplates">
+    <Type Name="MessageTemplate">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ObjectType" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Lang" Type="System.String" DbType="NChar(2)" CanBeNull="true" />
+      <Column Name="Published" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Approved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Text" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Alias" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="NotificationText" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Notifications" Member="Notifications">
+    <Type Name="Notification">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ObjectType" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Published" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Approved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Lang" Type="System.String" DbType="NChar(2)" CanBeNull="true" />
+      <Column Name="Text" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PublicationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModificationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AUTO_UsageCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsEmailSent" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="NotificationType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="REL_Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType" Type="System.String" DbType="NChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="REL_Entity_ID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="REL_Entity_ObjectType" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="REL_User_ID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="REL_User_ObjectType" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="IsAccepted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsDenied" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Organization_Depts" Member="Organization_Depts">
+    <Type Name="Organization_Dept">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ObjectType" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Published" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Approved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Lang" Type="System.String" DbType="NChar(2)" CanBeNull="true" />
+      <Column Name="OrganizationId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="Parent_OrganizationDept_ID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Organization_Users" Member="Organization_Users">
+    <Type Name="Organization_User">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ObjectType" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Published" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Approved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Lang" Type="System.String" DbType="NChar(2)" CanBeNull="true" />
+      <Column Name="Organization_ID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="User_ID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Organizations" Member="Organizations">
+    <Type Name="Organization">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ObjectType" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Published" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Approved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Lang" Type="System.String" DbType="NChar(2)" CanBeNull="true" />
+      <Column Name="Title_RU_I18N" Type="System.String" DbType="NVarChar(350)" CanBeNull="true" />
+      <Column Name="Title_EN_I18N" Type="System.String" DbType="NVarChar(350)" CanBeNull="true" />
+      <Column Name="IsApproved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Logo" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Website" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(350) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModificationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AUTO_ScholarCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AUTO_WorkerCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ShortDescription" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ImportCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="FK_Contacts_Organizations" Member="Contacts" ThisKey="Id,ObjectType" OtherKey="REL_Id,REL_ObjectType" Type="Contact" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OuterLinks" Member="OuterLinks">
+    <Type Name="OuterLink">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ObjectType" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Published" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Approved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Lang" Type="System.String" DbType="NChar(2)" CanBeNull="true" />
+      <Column Name="Link" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Text" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Paragraphs" Member="Paragraphs">
+    <Type Name="Paragraph">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ObjectType" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Published" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Approved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Lang" Type="System.String" DbType="NChar(2)" CanBeNull="true" />
+      <Column Name="Article_ID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ParagraphNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Text" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Patents" Member="Patents">
+    <Type Name="Patent">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ObjectType" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Published" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Approved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Lang" Type="System.String" DbType="NChar(2)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="REL_Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Number" Type="System.String" DbType="NVarChar(35) NOT NULL" CanBeNull="false" />
+      <Association Name="FK_Patents_Technos" Member="Techno" ThisKey="REL_Id,REL_ObjectType" OtherKey="Id,ObjectType" Type="Techno" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Photos" Member="Photos">
+    <Type Name="Photo">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ObjectType" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="REL_Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Published" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Approved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Lang" Type="System.String" DbType="NChar(2)" CanBeNull="true" />
+      <Column Name="Owner_User_ID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="UserFileName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ImageFormat" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
+      <Column Name="Guid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PublicationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModificationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="OrigWidth" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OrigHeight" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Width" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Height" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ThumbWidth" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ThumbHeight" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsInText" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="FK_Photos_Articles" Member="Article" ThisKey="REL_Id,REL_ObjectType" OtherKey="Id,ObjectType" Type="Article" IsForeignKey="true" />
+      <Association Name="FK_Photos_Conferences" Member="Conference" ThisKey="REL_Id,REL_ObjectType" OtherKey="Id,ObjectType" Type="Conference" IsForeignKey="true" />
+      <Association Name="FK_Photos_Discussions" Member="Discussion" ThisKey="REL_Id,REL_ObjectType" OtherKey="Id,ObjectType" Type="Discussion" IsForeignKey="true" />
+      <Association Name="FK_Photos_Events" Member="Event" ThisKey="REL_Id,REL_ObjectType" OtherKey="Id,ObjectType" Type="Event" IsForeignKey="true" />
+      <Association Name="FK_Photos_Grants" Member="Grant" ThisKey="REL_Id,REL_ObjectType" OtherKey="Id,ObjectType" Type="Grant" IsForeignKey="true" />
+      <Association Name="FK_Photos_Journals" Member="Journal" ThisKey="REL_Id,REL_ObjectType" OtherKey="Id,ObjectType" Type="Journal" IsForeignKey="true" />
+      <Association Name="FK_Photos_Technos" Member="Techno" ThisKey="REL_Id,REL_ObjectType" OtherKey="Id,ObjectType" Type="Techno" IsForeignKey="true" />
+      <Association Name="FK_Photos_Users" Member="User" ThisKey="REL_Id,REL_ObjectType" OtherKey="Id,ObjectType" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PrivateMessageItems" Member="PrivateMessageItems">
+    <Type Name="PrivateMessageItem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ObjectType" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Published" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Approved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Lang" Type="System.String" DbType="NChar(2)" CanBeNull="true" />
+      <Column Name="Owner_User_ID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PublicationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModificationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsEmailSent" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="EmailType" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="REL_Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType" Type="System.String" DbType="NChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Subject" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Text" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="REL_SenderUserId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ReceiverUserId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PrivateMessages" Member="PrivateMessages">
+    <Type Name="PrivateMessage">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ObjectType" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Published" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Approved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Lang" Type="System.String" DbType="NChar(2)" CanBeNull="true" />
+      <Column Name="Owner_User_ID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PublicationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModificationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsEmailSent" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="EmailType" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="REL_Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType" Type="System.String" DbType="NChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="AUTO_Subject" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="AUTO_Text" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="REL_SenderUserId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ReceiverUserId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_Adjoined" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="AUTO_Item_Count" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PublicationLinks" Member="PublicationLinks">
+    <Type Name="PublicationLink">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ObjectType" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Published" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Approved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Lang" Type="System.String" DbType="NChar(2)" CanBeNull="true" />
+      <Column Name="PublicationTitle" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="ISBN" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Publisher" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Editor" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="REF_Journal_Id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ISSN" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="TypePublication" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="DatePublication" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NumberEdition" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Reports" Member="Reports">
+    <Type Name="Report">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ObjectType" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Published" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Approved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Lang" Type="System.String" DbType="NChar(2)" CanBeNull="true" />
+      <Column Name="REL_Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Text" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="FK_Reports_Conferences" Member="Conference" ThisKey="REL_Id,REL_ObjectType" OtherKey="Id,ObjectType" Type="Conference" IsForeignKey="true" />
+      <Association Name="FK_Reports_Seminars" Member="Seminar" ThisKey="REL_Id,REL_ObjectType" OtherKey="Id,ObjectType" Type="Seminar" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Rubrics" Member="Rubrics">
+    <Type Name="Rubric">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ObjectType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Published" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Approved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Lang" Type="System.String" DbType="NChar(2)" CanBeNull="true" />
+      <Column Name="Parent_Rubric_ID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Alias" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="Header" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="MenuTitle_RU_I18N" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="MenuTitle_EN_I18N" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Seminars" Member="Seminars">
+    <Type Name="Seminar">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ObjectType" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Published" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Approved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Lang" Type="System.String" DbType="NChar(2)" CanBeNull="true" />
+      <Column Name="State" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EventStartDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Place" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Owner_User_ID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PublicationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModificationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AUTO_CommentCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ShortDescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Text" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="EventEndDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="AUTO_Comment_LastDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AUTO_DefaultPhoto_Guid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="AUTO_DefaultPhoto_Alt" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="AUTO_ObjectUserVisitorCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PSEUDO_IsUserFavourite" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PSEUDO_NewCommentCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsCycle" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="REL_Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="FK_Comments_Seminars" Member="Comments" ThisKey="Id,ObjectType" OtherKey="REL_Id,REL_ObjectType" Type="Comment" DeleteRule="NO ACTION" />
+      <Association Name="FK_Reports_Seminars" Member="Reports" ThisKey="Id,ObjectType" OtherKey="REL_Id,REL_ObjectType" Type="Report" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tags" Member="Tags">
+    <Type Name="Tag">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ObjectType" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Published" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Approved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Lang" Type="System.String" DbType="NChar(2)" CanBeNull="true" />
+      <Column Name="Owner_User_ID" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Text" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PublicationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModificationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AUTO_UsageCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Technos" Member="Technos">
+    <Type Name="Techno">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ObjectType" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Published" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Approved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Lang" Type="System.String" DbType="NChar(2)" CanBeNull="true" />
+      <Column Name="Owner_User_ID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="ShortDescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Text" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PublicationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModificationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AUTO_CommentCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AUTO_Comment_LastDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AUTO_DefaultPhoto_Guid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="AUTO_DefaultPhoto_Alt" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="PSEUDO_IsUserFavourite" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PSEUDO_NewCommentCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DevelopmentStage" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="InnovativeFeatures" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CompetitiveAdvantages" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Scope" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ResourcesDevelopment" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="WayCommercialization" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="RestrictionsCommercialization" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ExpectedMarket" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CommercialExperience" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="AdditionalInformation" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="FK_Comments_Technos" Member="Comments" ThisKey="Id,ObjectType" OtherKey="REL_Id,REL_ObjectType" Type="Comment" DeleteRule="NO ACTION" />
+      <Association Name="FK_FileAttachments_Technos" Member="FileAttachments" ThisKey="Id,ObjectType" OtherKey="REL_Id,REL_ObjectType" Type="FileAttachment" DeleteRule="NO ACTION" />
+      <Association Name="FK_Patents_Technos" Member="Patents" ThisKey="Id,ObjectType" OtherKey="REL_Id,REL_ObjectType" Type="Patent" DeleteRule="NO ACTION" />
+      <Association Name="FK_Photos_Technos" Member="Photos" ThisKey="Id,ObjectType" OtherKey="REL_Id,REL_ObjectType" Type="Photo" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.User_Degrees" Member="User_Degrees">
+    <Type Name="User_Degree">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ObjectType" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Published" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Approved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Lang" Type="System.String" DbType="NChar(2)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="Specialty" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="IssuePlace" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="IssueDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="WorkTitle" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Article_ID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="REL_Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="FK_User_Degrees_Users" Member="User" ThisKey="REL_Id,REL_ObjectType" OtherKey="Id,ObjectType" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.User_FriendRequests" Member="User_FriendRequests">
+    <Type Name="User_FriendRequest">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ObjectType" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Published" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Approved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Lang" Type="System.String" DbType="NChar(2)" CanBeNull="true" />
+      <Column Name="Target_User_ID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="FK_User_FriendRequests_Users" Member="User" ThisKey="REL_Id,REL_ObjectType" OtherKey="Id,ObjectType" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.User_Groups" Member="User_Groups">
+    <Type Name="User_Group">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ObjectType" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="REL_Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType" Type="System.String" DbType="NChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Lang" Type="System.String" DbType="NChar(2)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="AUTO_User_Count" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Published" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Approved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.User_Jobs" Member="User_Jobs">
+    <Type Name="User_Job">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ObjectType" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Published" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Approved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Lang" Type="System.String" DbType="NChar(2)" CanBeNull="true" />
+      <Column Name="StartYear" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="EndYear" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="Division1" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Division2" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Division3" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Position" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="State" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="REL_Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="FK_User_Jobs_Users" Member="User" ThisKey="REL_Id,REL_ObjectType" OtherKey="Id,ObjectType" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.User_Univers" Member="User_Univers">
+    <Type Name="User_Univer">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ObjectType" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Published" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Approved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Lang" Type="System.String" DbType="NChar(2)" CanBeNull="true" />
+      <Column Name="StartYear" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="EndYear" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="Faculty" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Department" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Group" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Specialty" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="State" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="REL_Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="REL_ObjectType" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="FK_User_Univers_Users" Member="User" ThisKey="REL_Id,REL_ObjectType" OtherKey="Id,ObjectType" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Users" Member="Users">
+    <Type Name="User">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ObjectType" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Published" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Approved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Lang" Type="System.String" DbType="NChar(2)" CanBeNull="true" />
+      <Column Name="LastVisitDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="RegistrationDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="IsOnline" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Photo" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="BirthDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="MiddleName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="AUTO_DefaultPhoto_Guid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="AUTO_DefaultPhoto_Alt" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Specialty" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="UserLogin" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NChar(32) NOT NULL" CanBeNull="false" />
+      <Column Name="Activation_guid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Sex" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Options_SubscribeNews" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Options_SubscribePrivateMessages" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Options_SubscribeNewComments" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Options_SubscribeJoin" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Options_SubscribeFriendRequest" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Options_ShowAge" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Options_ShowContacts" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Options_ShowJobs" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Options_ShowEducations" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Options_ShowMiddleName" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Options_ShowInterests" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Recoverpass_guid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="IsAdmin" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="UseSelectedRubrics" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="OneRubricSelection" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="FK_Contacts_Users" Member="Contacts" ThisKey="Id,ObjectType" OtherKey="REL_Id,REL_ObjectType" Type="Contact" DeleteRule="NO ACTION" />
+      <Association Name="FK_FileAttachments_Users" Member="FileAttachments" ThisKey="Id,ObjectType" OtherKey="REL_Id,REL_ObjectType" Type="FileAttachment" DeleteRule="NO ACTION" />
+      <Association Name="FK_Photos_Users" Member="Photos" ThisKey="Id,ObjectType" OtherKey="REL_Id,REL_ObjectType" Type="Photo" DeleteRule="NO ACTION" />
+      <Association Name="FK_User_Degrees_Users" Member="User_Degrees" ThisKey="Id,ObjectType" OtherKey="REL_Id,REL_ObjectType" Type="User_Degree" DeleteRule="NO ACTION" />
+      <Association Name="FK_User_FriendRequests_Users" Member="User_FriendRequests" ThisKey="Id,ObjectType" OtherKey="REL_Id,REL_ObjectType" Type="User_FriendRequest" DeleteRule="NO ACTION" />
+      <Association Name="FK_User_Jobs_Users" Member="User_Jobs" ThisKey="Id,ObjectType" OtherKey="REL_Id,REL_ObjectType" Type="User_Job" DeleteRule="NO ACTION" />
+      <Association Name="FK_User_Univers_Users" Member="User_Univers" ThisKey="Id,ObjectType" OtherKey="REL_Id,REL_ObjectType" Type="User_Univer" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ViewMaterials" Member="ViewMaterials">
+    <Type Name="ViewMaterial">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ObjectType" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Lang" Type="System.String" DbType="NChar(2)" CanBeNull="true" />
+      <Column Name="Published" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Approved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="ShortDescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PublicationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ViewUserMaterials" Member="ViewUserMaterials">
+    <Type Name="ViewUserMaterial">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ObjectType" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Lang" Type="System.String" DbType="NChar(2)" CanBeNull="true" />
+      <Column Name="Published" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Approved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="ShortDescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PublicationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ObjectAuthorId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ObjectAuthorType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

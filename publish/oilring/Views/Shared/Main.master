@@ -1,0 +1,19 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Views/Shared/Site.Master" AutoEventWireup="true"
+    CodeBehind="Main.master.cs" Inherits="Notamedia.Oilring.Community.Views.Shared.Main" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
+</asp:Content>
+<asp:Content ID="Page" ContentPlaceHolderID="m_Page" runat="server">
+
+    <% Html.RenderPartial("HeaderBlock"); %>
+
+    <!--середина-->
+    <div id="mainwrap">
+        <% Html.RenderPartial("TopPanelBlock"); %>
+        <% if (!Request.Url.AbsoluteUri.Contains("Organization")) { %>
+        <% Html.RenderPartial("FilterBlock"); %>
+        <%} %>
+        <asp:ContentPlaceHolder ID="m_Middle" runat="server"></asp:ContentPlaceHolder>
+    </div>
+    <!--/середина-->
+</asp:Content>

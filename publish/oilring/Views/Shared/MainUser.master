@@ -1,0 +1,75 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Views/Shared/Site.Master" AutoEventWireup="true"
+    CodeBehind="MainUser.master.cs" Inherits="Notamedia.Oilring.Community.Views.Shared.MainUser" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
+</asp:Content>
+<asp:Content ID="FriendsPopups" ContentPlaceHolderID="m_Popups" runat="server">
+    <div class="popup deleteUserBlock" style="">
+        <div class="bgBlock">
+            <form>
+            <dfn>Удаление коллеги</dfn>
+            <div class="wrap iForm">
+                Вы действительно хотите удалить <b><span class="_userTitle">Иванов Илья</span></b>?
+                <ul class="check">
+                    <li>
+                        <label for="r1">
+                            <input type="radio" value="" id="r1" name="r1" class="_deleteFromList" />Удалить только из
+                            этого списка <span>(<span class="_groupTitle"></span>)</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="r2">
+                            <input type="radio" value="" id="r1" name="r1" class="_deleteFromFriends" />Удалить из коллег
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div class="but">
+                <input type="button" value="Удалить" class="ibutton _ok" data-uri="/ru/User_Group/DeleteFromGroup" />
+            </div>
+        </div>
+        </form>
+    </div>
+    <div class="popup addUserBlock">
+        <!-- по клику показываем -->
+        <div class="bgBlock">
+            <dfn>Добавление коллег в список «<span class="_groupTitle"></span>»</dfn>
+            <div class="wrap iForm">
+                <%
+                    var module = new UserModule(new DummyEntity(Html.CurrentUserId(), "user")) { Behave = "availableUsers", Ajax = true, Delayed = true, Relation = "GroupFriendLink", ViewName = "RelatedListWidgetFriendsSelect" };
+                    module.List(Html);
+                %>
+            </div>
+            <div class="but">
+                <input type="submit" value="Добавить выбранные" class="ibutton _ok" data-uri="/ru/User_Group/AddToGroup" />
+            </div>
+        </div>
+    </div>
+    <div class="popup addUserGroupBlock">
+        <!-- по клику показываем -->
+        <div class="bgBlock">
+            <dfn>Создать новый список</dfn>
+            <div class="wrap iForm">
+                <div class="borderAll10 input">
+                    <div>
+                        <input type="text" value="" id="userGroupTitle" class="_title" /></div>
+                </div>
+            </div>
+            <div class="but">
+                <input type="submit" value="Создать список" class="ibutton _ok" data-uri="/ru/User_Group/CreateGroup" />
+                <input type="button" value="Отмена" class="ibutton _cancel" />
+            </div>
+        </div>
+    </div>
+    <% 
+        Html.RenderPartial("../PrivateMessage/AddMessageBlockPopup", new PrivateMessageObject());
+    %>
+<asp:ContentPlaceHolder ID="m_Popups" runat="server">
+</asp:ContentPlaceHolder>
+
+</asp:Content>
+<asp:Content ID="PageUser" ContentPlaceHolderID="m_Page" runat="server">
+    <% Html.RenderPartial("HeaderBlock"); %>
+    <asp:ContentPlaceHolder ID="m_Middle" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>

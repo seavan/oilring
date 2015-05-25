@@ -1,0 +1,14 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Views/Shared/Main.master" AutoEventWireup="true" CodeBehind="MainInnerNoMenu.master.cs" Inherits="Notamedia.Oilring.Community.Views.Shared.MainInnerNoMenu" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="m_Middle" runat="server">
+    <div id="middleWrap" class="borderBot10">
+        <div class="block1 borderAll10">
+
+        <asp:ContentPlaceHolder ID="m_Middle" runat="server"></asp:ContentPlaceHolder>
+        </div>
+        <div class="block2">
+            <!--баннеры-->
+            <% Html.RenderPartial("BannerBlock"); %>
+            <!--/баннеры-->
+        </div>
+     </div>
+</asp:Content>
